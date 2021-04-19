@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Fitnesspoint.Models.WeightLogModel>
+
+@{
+    ViewBag.Title = "showAllWeightLog";
+}
+
+<h2>All Weights</h2>
+
+<p>
+    @Html.ActionLink("Create New Weight", "addWeightLog")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId }) |
+                @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }) |
+                @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId })
+            </td>
+        </tr>
+    }
+
+</table>

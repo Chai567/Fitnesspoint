@@ -1,0 +1,36 @@
+﻿@model Fitnesspoint.Models.WeightLogModel
+
+@{
+    ViewBag.Title = "showWeightLog";
+}
+
+<h2>List Weight</h2>
+
+<div>
+    @*<h4>WeightLogModel</h4>*@
+    <hr />
+    @Html.HiddenFor(model => model.WeightId)
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = Model.WeightId }) |
+    @Html.ActionLink("Display All Weights", "showAllWeightLog")
+</p>

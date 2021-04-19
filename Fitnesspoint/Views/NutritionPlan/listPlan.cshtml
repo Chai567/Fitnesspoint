@@ -1,0 +1,44 @@
+﻿@model Fitnesspoint.Models.NutritionPlanModel
+
+@{
+    ViewBag.Title = "listPlan";
+}
+
+<h2>List Plan</h2>
+
+<div>
+    @*<h4>NutritionPlanModel</h4>*@
+    <hr />
+    @Html.HiddenFor(model => model.NutriPlanId)
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanDescription)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "changePlan", new { plan_id = Model.NutriPlanId }) |
+    @Html.ActionLink("Display All Nutrition Plans", "listAllPlans")
+</p>

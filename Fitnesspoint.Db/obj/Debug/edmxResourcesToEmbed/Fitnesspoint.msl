@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FitnesspointDatabaseModelStoreContainer" CdmEntityContainer="FitnesspointDatabaseEntities">
+    <EntitySetMapping Name="NutritionPlans">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.NutritionPlan">
+        <MappingFragment StoreEntitySet="NutritionPlan">
+          <ScalarProperty Name="NutriPlanId" ColumnName="NutriPlanId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="Created_At" ColumnName="Created_At" />
+          <ScalarProperty Name="Updated_At" ColumnName="Updated_At" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Payment1" ColumnName="Payment1" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="NationalId" ColumnName="NationalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_cred">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment_cred">
+        <MappingFragment StoreEntitySet="Payment_cred">
+          <ScalarProperty Name="DebitCardNo" ColumnName="DebitCardNo" />
+          <ScalarProperty Name="CreditCardNo" ColumnName="CreditCardNo" />
+          <ScalarProperty Name="Expiry_Month" ColumnName="Expiry_Month" />
+          <ScalarProperty Name="Expiry_Year" ColumnName="Expiry_Year" />
+          <ScalarProperty Name="cvv" ColumnName="cvv" />
+          <ScalarProperty Name="Nid" ColumnName="Nid" />
+          <ScalarProperty Name="AtmPin" ColumnName="AtmPin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetails">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="MedicalCondition" ColumnName="MedicalCondition" />
+          <ScalarProperty Name="AllergicTo" ColumnName="AllergicTo" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Diet_Plan_id" ColumnName="Diet_Plan_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeightLogs">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.WeightLog">
+        <MappingFragment StoreEntitySet="WeightLog">
+          <ScalarProperty Name="WeightId" ColumnName="WeightId" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Created_At" ColumnName="Created_At" />
+          <ScalarProperty Name="Updated_At" ColumnName="Updated_At" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

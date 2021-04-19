@@ -1,0 +1,14 @@
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.dll.config
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.dll
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.pdb
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\EntityFramework.dll
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Models.dll
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Models.pdb
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\EntityFramework.xml
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csprojAssemblyReference.cache
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csproj.CoreCompileInputs.cache
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csproj.CopyComplete
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.dll
+C:\Users\Chaitanya.shah\Desktop\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.pdb
