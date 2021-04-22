@@ -58,6 +58,7 @@ namespace Fitnesspoint.Controllers
                 ViewData["Email"] = E;
                 ViewData["Goal"] = Goal;
                 ViewData["Contact"] = C;
+                
                 Session["Id"] = Id;
 
                 
@@ -90,13 +91,13 @@ namespace Fitnesspoint.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Username,Password,Role,Diet_Plan_id,Goal,Contact")] UserDetail userDetail)
+        public ActionResult Edit([Bind(Include = "Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Goal")] UserDetail userDetail)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(userDetail).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                var v=db.SaveChanges();
+                return RedirectToAction("Welcome");
             }
             return View(userDetail);
         }

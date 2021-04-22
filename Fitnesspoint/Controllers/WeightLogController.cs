@@ -19,6 +19,7 @@ namespace Fitnesspoint.Controllers
         // GET: WeightLog/addWeightLog
         public ActionResult addWeightLog()
         {
+           
             return View();
         }
 
