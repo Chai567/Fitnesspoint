@@ -4,47 +4,48 @@
     ViewBag.Title = "listAllPlans";
 }
 
-<h2>All Nutrition Plans</h2>
+<h2 style="color:antiquewhite;text-align:center">All Nutrition Plans</h2>
+@Html.ActionLink("Create New Plan", "createNutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
+    <br />
+    <br />
+    <div style="background-color:antiquewhite">
+        <table class="table">
+            <tr>
 
-<p>
-    @Html.ActionLink("Create New Nutrition Plan", "createNutritionPlan")
-</p>
-<table class="table">
-    <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlanDescription)
+                </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlanDescription)
-        </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
+            </tr>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlanDescription)
+                    </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlanDescription)
-            </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "changePlan", new { plan_id = item.NutriPlanId }) |
+                        @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }) |
+                        @Html.ActionLink("Delete", "removePlan", new { plan_id = item.NutriPlanId })
+                    </td>
+                </tr>
+            }
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "changePlan", new { plan_id = item.NutriPlanId }) |
-                @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }) |
-                @Html.ActionLink("Delete", "removePlan", new { plan_id = item.NutriPlanId })
-            </td>
-        </tr>
-    }
-
-</table>
+        </table>
+    </div>

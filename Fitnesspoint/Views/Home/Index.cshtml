@@ -1,31 +1,51 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+    .button5 {
+        background-color: black;
+        color: white
+    }
+</style>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+<div class="jumbotron" style="background-color:antiquewhite">
+    <h1><b>Fitnesspoint</b> <i class='fas fa-angle-double-right'></i><i class='fas fa-angle-double-right'></i></h1>
+    <p class="lead">Making the smart food and nutrition choices is a necessary part of everyone's daily life.</p>
+
 </div>
-
+<div class="jumbotron" style="background-color:azure">
+    @Html.ActionLink("Sign up >>", "Register", "Account",null, new { @class = "btn btn-primary btn-lg" })
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    @Html.ActionLink("Sign in >>", "Login", "Account",null ,new { @class = "btn btn-primary btn-lg" })
+</div>
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+        <h2 style="color:lemonchiffon">Whats Your Body Type <span class="iconify" data-icon="bi-patch-question-fill" data-inline="false"></span></h2>
+        <p style="color:ghostwhite">
+            Your body type can influence how you respond to different types of workouts and diet plans.
+            So it’s important to be able to identify and understand your body type. Different body types require different training methods and diet plans.
+
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Read more >>", "BodyType", "Home", new { @class = "btn btn-default button5" })</p>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2 style="color:lemonchiffon">Work-Out Ideas <i class='fas fa-lightbulb' style="color:yellow"></i></h2>
+        <p style="color:ghostwhite">Who isn't in a time crunch these days? Even with the best intentions, it's easy to fall off the workout wagon after a hiccup in a weekly routine. Yet, the beneficial effects of exercise are undeniable and far outweigh any health related risks.</p>
+        <p>@Html.ActionLink("Read more >>", "WorkOutIdeas", "Home", new { @class = "btn btn-default button5" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h3 style="color:lemonchiffon">Allergies and Intolerances <i class='fas fa-exclamation-triangle' style="color: red;font-size: 0.70em"></i></h3>
+        <p style="color:ghostwhite">
+            Food allergies get lots of attention, so it's natural to wonder about the potential harm.
+            While reactions to food can be serious, it's important to know the facts and what you can do to reduce the risk.
+        </p>
+        <p>@Html.ActionLink("Read more >>", "AllergiesAndIntolerances", "Home", new { @class = "btn btn-default button5" })</p>
     </div>
 </div>

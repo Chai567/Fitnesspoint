@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿
+<!DOCTYPE html>
 <html>
 
 
@@ -56,14 +56,15 @@
 
                     @if (User.Identity.IsAuthenticated)
                     {
-                        
+
 
                         <li class="navbar-brand" style="color:darkseagreen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome,@User.Identity.Name !!</b>&nbsp;&nbsp;&nbsp;</li>
 
-                        <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "navbar-brand", @style = "color:darksalmon;font-weight:bold" })</li>
-                         
+                        <li>@Html.ActionLink("Admin View", "Adminview", "Admin", null, new { @class = "navbar-brand", @style = "color:darksalmon;font-weight:bold" })&nbsp;&nbsp;&nbsp;</li>
 
-                     }
+                        <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "navbar-brand", @style = "color:darksalmon;font-weight:bold" })</li>
+
+                    }
 
 
                 </ul>
@@ -84,3 +85,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
