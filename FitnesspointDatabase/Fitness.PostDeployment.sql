@@ -10,4 +10,4 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-PRINT('Post deployment')
+PRINT('Post Deployment')

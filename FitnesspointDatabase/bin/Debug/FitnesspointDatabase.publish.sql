@@ -266,9 +266,44 @@ GO
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
-PRINT('Pre deployment script')
+PRINT('Pre Deployment')
 GO
+
+GO
+PRINT N'Creating Table [dbo].[Diet_Plan]...';
+
+
+GO
+CREATE TABLE [dbo].[Diet_Plan] (
+    [UserId]       INT          NOT NULL,
+    [FoodType]     VARCHAR (50) NOT NULL,
+    [ProteinRatio] FLOAT (53)   NULL,
+    [FatRaio]      FLOAT (53)   NULL,
+    [CarbsRatio]   FLOAT (53)   NULL,
+    [Total]        INT          NOT NULL,
+    [DietName]     VARCHAR (50) NULL,
+    CONSTRAINT [PK_Diet_Plan] PRIMARY KEY CLUSTERED ([UserId] ASC) ON [PRIMARY]
+) ON [PRIMARY];
+
+
+GO
+PRINT N'Creating Table [dbo].[ExerciseDetail]...';
+
+
+GO
+CREATE TABLE [dbo].[ExerciseDetail] (
+    [ExerciseID]   INT          NOT NULL,
+    [ExerciseType] VARCHAR (50) NOT NULL,
+    [ExerciseFor]  VARCHAR (50) NOT NULL,
+    [TotalSet]     INT          NOT NULL,
+    [Rest]         VARCHAR (50) NOT NULL,
+    [Focus]        VARCHAR (50) NOT NULL,
+    [Equipement]   VARCHAR (50) NOT NULL,
+    [Time]         VARCHAR (50) NOT NULL,
+    [ExerciseName] VARCHAR (50) NOT NULL,
+    [UserID]       BIGINT       NULL
+) ON [PRIMARY];
+
 
 GO
 PRINT N'Creating Table [dbo].[NutritionPlan]...';
@@ -378,15 +413,6 @@ ALTER TABLE [dbo].[Payment_cred]
 
 
 GO
-PRINT N'Creating Default Constraint [dbo].[DF_UserDetails_Role]...';
-
-
-GO
-ALTER TABLE [dbo].[UserDetails]
-    ADD CONSTRAINT [DF_UserDetails_Role] DEFAULT ('User') FOR [Role];
-
-
-GO
 PRINT N'Creating Foreign Key [dbo].[FK_Payment_cred_Payment_cred]...';
 
 
@@ -417,7 +443,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-PRINT('Post deployment')
+PRINT('Post Deployment')
 GO
 
 GO

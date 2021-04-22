@@ -6,7 +6,7 @@
     <Name>FitnesspointDatabase</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{00653170-50cc-45d6-ad30-a2add39f1e9d}</ProjectGuid>
+    <ProjectGuid>{340dce8b-5dee-46b2-9ddb-29be5193e43e}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -58,11 +58,13 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="NutritionPlan.sql" />
     <Build Include="UserDetails.sql" />
-    <Build Include="WeightLog.sql" />
+    <Build Include="NutritionPlan.sql" />
     <Build Include="Payment.sql" />
     <Build Include="Payment_cred.sql" />
+    <Build Include="WeightLog.sql" />
+    <Build Include="Diet_Plan.sql" />
+    <Build Include="Exercise.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Fitness.PreDeployment.sql" />

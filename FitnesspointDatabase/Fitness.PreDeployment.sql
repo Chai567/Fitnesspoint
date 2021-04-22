@@ -9,5 +9,4 @@
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
-PRINT('Pre deployment script')
+PRINT('Pre Deployment')

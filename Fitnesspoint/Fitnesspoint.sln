@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitnesspoint", "Fitnesspoint.csproj", "{31337D28-D1FD-4CC1-8B1C-97C622C374EA}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FitnesspointDatabase", "..\FitnesspointDatabase\FitnesspointDatabase.sqlproj", "{00653170-50CC-45D6-AD30-A2ADD39F1E9D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitnesspoint.Db", "..\Fitnesspoint.Db\Fitnesspoint.Db.csproj", "{AD77A6D3-0DEE-4C46-B610-0AFA7FF36F16}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitnesspoint.Models", "..\Fitnesspoint.Models\Fitnesspoint.Models.csproj", "{C7CCA970-A405-4646-AB70-D530B0888D23}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FitnesspointDatabase", "..\FitnesspointDatabase\FitnesspointDatabase.sqlproj", "{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +21,6 @@ Global
 		{31337D28-D1FD-4CC1-8B1C-97C622C374EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31337D28-D1FD-4CC1-8B1C-97C622C374EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31337D28-D1FD-4CC1-8B1C-97C622C374EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00653170-50CC-45D6-AD30-A2ADD39F1E9D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{AD77A6D3-0DEE-4C46-B610-0AFA7FF36F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD77A6D3-0DEE-4C46-B610-0AFA7FF36F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD77A6D3-0DEE-4C46-B610-0AFA7FF36F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,6 +29,12 @@ Global
 		{C7CCA970-A405-4646-AB70-D530B0888D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7CCA970-A405-4646-AB70-D530B0888D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7CCA970-A405-4646-AB70-D530B0888D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340DCE8B-5DEE-46B2-9DDB-29BE5193E43E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

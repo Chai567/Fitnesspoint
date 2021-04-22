@@ -224,10 +224,6 @@
       <Project>{c7cca970-a405-4646-ab70-d530b0888d23}</Project>
       <Name>Fitnesspoint.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FitnesspointDatabase\FitnesspointDatabase.sqlproj">
-      <Project>{00653170-50cc-45d6-ad30-a2add39f1e9d}</Project>
-      <Name>FitnesspointDatabase</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

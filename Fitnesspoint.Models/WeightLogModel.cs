@@ -36,7 +36,7 @@ namespace Fitnesspoint.Models
         [Required(ErrorMessage = "User Id is required.")]
         //Display UserID as User Id
         [Display(Name = "User Id")]
-        public Nullable<int> UserId { get; set; }
+        public int? UserId { get; set; }
 
         public virtual UserDetailModel User { get; set; }
     }

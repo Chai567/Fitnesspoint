@@ -84,6 +84,16 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
+
+        //USER Weight Log
+
+        
+
+
+
+
+
+
         //updateWeight() update the WeightLogs based on WeightId and WeightLogModel
         public bool updateWeight(int weight_id, WeightLogModel weight)
         {
