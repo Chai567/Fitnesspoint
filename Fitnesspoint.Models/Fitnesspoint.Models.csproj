@@ -46,6 +46,7 @@
     <Compile Include="NutritionPlanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDetailModel.cs" />
+    <Compile Include="UserModel.cs" />
     <Compile Include="WeightLogModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

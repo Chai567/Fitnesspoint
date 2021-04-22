@@ -3,3 +3,9 @@ C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\bin\Debug\FitnesspointDatab
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\project\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache

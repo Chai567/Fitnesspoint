@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[NutritionPlan] (Table)
+       [dbo].[Payment] (Table)
+       [dbo].[Payment_cred] (Table)
+       [dbo].[UserDetails] (Table)
+       [dbo].[WeightLog] (Table)
+       [dbo].[DF_Payment_cred_Debit_card_No.] (Default Constraint)
+       [dbo].[DF_Payment_cred_Credit_Card_No.] (Default Constraint)
+       [dbo].[DF_UserDetails_Role] (Default Constraint)
+       [dbo].[FK_Payment_cred_Payment_cred] (Foreign Key)
+       Foreign Key: <unnamed> (Foreign Key)
+
+** Supporting actions
