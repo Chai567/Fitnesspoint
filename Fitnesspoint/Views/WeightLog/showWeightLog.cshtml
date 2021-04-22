@@ -4,12 +4,14 @@
     ViewBag.Title = "showWeightLog";
 }
 
-<h2>List Weight</h2>
+<h2 style="color:antiquewhite">List Weight</h2>
 
 <div>
     @*<h4>WeightLogModel</h4>*@
     <hr />
     @Html.HiddenFor(model => model.WeightId)
+<div class="container-fluid" style="background-color:antiquewhite">
+    <br />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Weight)
@@ -29,8 +31,14 @@
         </dd>
 
     </dl>
+    
+  </div>
+    <p style="font-size:large;font-weight:900;text-align:left">
+        @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = Model.WeightId })
+    </p>
+    <p style="font-size:large;font-weight:900;text-align:right">
+        &nbsp;&nbsp;
+        @Html.ActionLink("Display All Weights", "showAllWeightLog")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = Model.WeightId }) |
-    @Html.ActionLink("Display All Weights", "showAllWeightLog")
-</p>
+

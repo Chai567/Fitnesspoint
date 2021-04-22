@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Fitnesspoint.Db.UserDetail>
+
+@{
+    ViewBag.Title = "Admin Login";
+}
+
+
+
+@Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-lg" })
+<br />
+<br />
+<table class="table" style="background-color:antiquewhite">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicalCondition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllergicTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Goal)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalCondition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllergicTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Goal)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserId })
+                @Html.ActionLink("Details", "Details", new { id = item.UserId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+            </td>
+        </tr>
+    }
+
+</table>
+
