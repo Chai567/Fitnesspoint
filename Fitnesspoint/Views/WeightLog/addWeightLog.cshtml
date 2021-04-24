@@ -24,14 +24,14 @@
 
 
         <div class="form-group">
-
+            
             @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control"} })
+                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Add Weight" class="btn btn-primary lg" />

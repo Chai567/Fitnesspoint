@@ -11,7 +11,7 @@ namespace Fitnesspoint.Db.DbOperations
         //savePlan() saves NutritionPlan in the database
         public NutritionPlan savePlan(NutritionPlanModel plan)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //Creating NutritionPlan object and assigning data using NutritionPlanModel class
@@ -39,7 +39,7 @@ namespace Fitnesspoint.Db.DbOperations
         //findAllNutritionPlan() returns the list of NutritionPlanModel Objects
         public List<NutritionPlanModel> findAllNutritionPlan()
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan using model NutritionPlanModel in the list form
@@ -65,7 +65,7 @@ namespace Fitnesspoint.Db.DbOperations
         //findNutritionPlan() returns the NutritionPlans based on NutriPlanId
         public NutritionPlanModel findNutritionPlan(int plan_id)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan
@@ -94,7 +94,7 @@ namespace Fitnesspoint.Db.DbOperations
         //updateNutritionPlan() update the NutritionPlans based on NutriPlanId and NutritionPlanModel
         public bool updateNutritionPlan(int plan_id, NutritionPlanModel plan)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan based on NutriPlanId
@@ -118,7 +118,7 @@ namespace Fitnesspoint.Db.DbOperations
         //deleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
         public bool deleteNutritionPlan(int plan_id, NutritionPlanModel plan)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan based on NutriPlanId

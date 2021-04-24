@@ -266,23 +266,39 @@ GO
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-PRINT('Pre Deployment')
+
+PRINT('Pre deployment')
 GO
 
 GO
-PRINT N'Creating Table [dbo].[Diet_Plan]...';
+PRINT N'Creating Table [dbo].[Bank]...';
 
 
 GO
-CREATE TABLE [dbo].[Diet_Plan] (
-    [UserId]       INT          NOT NULL,
+CREATE TABLE [dbo].[Bank] (
+    [NId]       BIGINT       NOT NULL,
+    [Bank_Name] VARCHAR (50) NOT NULL,
+    [Branch]    VARCHAR (50) NOT NULL,
+    [Balance]   INT          NOT NULL,
+    CONSTRAINT [PK_Bank] PRIMARY KEY CLUSTERED ([NId] ASC) ON [PRIMARY]
+) ON [PRIMARY];
+
+
+GO
+PRINT N'Creating Table [dbo].[DietPlan]...';
+
+
+GO
+CREATE TABLE [dbo].[DietPlan] (
+    [DietId]       INT          IDENTITY (1, 1) NOT NULL,
+    [Slots]        INT          NOT NULL,
     [FoodType]     VARCHAR (50) NOT NULL,
-    [ProteinRatio] FLOAT (53)   NULL,
-    [FatRaio]      FLOAT (53)   NULL,
-    [CarbsRatio]   FLOAT (53)   NULL,
-    [Total]        INT          NOT NULL,
-    [DietName]     VARCHAR (50) NULL,
-    CONSTRAINT [PK_Diet_Plan] PRIMARY KEY CLUSTERED ([UserId] ASC) ON [PRIMARY]
+    [FatRatio]     INT          NOT NULL,
+    [CarbsRatio]   INT          NOT NULL,
+    [ProteinRatio] INT          NOT NULL,
+    [TotalCalorie] INT          NOT NULL,
+    [UserId]       INT          NOT NULL,
+    CONSTRAINT [PK_DietPlan] PRIMARY KEY CLUSTERED ([DietId] ASC) ON [PRIMARY]
 ) ON [PRIMARY];
 
 
@@ -301,7 +317,8 @@ CREATE TABLE [dbo].[ExerciseDetail] (
     [Equipement]   VARCHAR (50) NOT NULL,
     [Time]         VARCHAR (50) NOT NULL,
     [ExerciseName] VARCHAR (50) NOT NULL,
-    [UserID]       BIGINT       NULL
+    [UserID]       INT          NULL,
+    CONSTRAINT [PK_ExerciseDetail] PRIMARY KEY CLUSTERED ([ExerciseID] ASC) ON [PRIMARY]
 ) ON [PRIMARY];
 
 
@@ -322,18 +339,18 @@ CREATE TABLE [dbo].[NutritionPlan] (
 
 
 GO
-PRINT N'Creating Table [dbo].[Payment]...';
+PRINT N'Creating Table [dbo].[Payment_]...';
 
 
 GO
-CREATE TABLE [dbo].[Payment] (
-    [TransactionId] INT    IDENTITY (1000001, 1) NOT NULL,
-    [Payment1]      INT    NULL,
-    [Discount]      INT    NOT NULL,
-    [UserId]        INT    NOT NULL,
-    [PlanId]        INT    NOT NULL,
-    [NationalId]    BIGINT NOT NULL,
-    CONSTRAINT [PK_Payment] PRIMARY KEY CLUSTERED ([UserId] ASC) ON [PRIMARY]
+CREATE TABLE [dbo].[Payment_] (
+    [TransactionId] INT NOT NULL,
+    [UserId]        INT NOT NULL,
+    [PlanId]        INT NOT NULL,
+    [Payment1]      INT NOT NULL,
+    [Discount]      INT NOT NULL,
+    [NationalId]    INT NOT NULL,
+    CONSTRAINT [PK_Payment_] PRIMARY KEY CLUSTERED ([TransactionId] ASC) ON [PRIMARY]
 ) ON [PRIMARY];
 
 
@@ -344,7 +361,7 @@ PRINT N'Creating Table [dbo].[Payment_cred]...';
 GO
 CREATE TABLE [dbo].[Payment_cred] (
     [DebitCardNo]  INT    NOT NULL,
-    [CreditCardNo] INT    NOT NULL,
+    [Balance]      INT    NOT NULL,
     [Expiry_Month] INT    NOT NULL,
     [Expiry_Year]  INT    NOT NULL,
     [cvv]          INT    NOT NULL,
@@ -409,7 +426,43 @@ PRINT N'Creating Default Constraint [dbo].[DF_Payment_cred_Credit_Card_No.]...';
 
 GO
 ALTER TABLE [dbo].[Payment_cred]
-    ADD CONSTRAINT [DF_Payment_cred_Credit_Card_No.] DEFAULT ((0)) FOR [CreditCardNo];
+    ADD CONSTRAINT [DF_Payment_cred_Credit_Card_No.] DEFAULT ((0)) FOR [Balance];
+
+
+GO
+PRINT N'Creating Foreign Key [dbo].[FK_DietPlan_User]...';
+
+
+GO
+ALTER TABLE [dbo].[DietPlan]
+    ADD CONSTRAINT [FK_DietPlan_User] FOREIGN KEY ([UserId]) REFERENCES [dbo].[UserDetails] ([UserId]);
+
+
+GO
+PRINT N'Creating Foreign Key <unnamed>...';
+
+
+GO
+ALTER TABLE [dbo].[ExerciseDetail]
+    ADD FOREIGN KEY ([UserID]) REFERENCES [dbo].[UserDetails] ([UserId]);
+
+
+GO
+PRINT N'Creating Foreign Key [dbo].[FK_Payment__NutritionPlan]...';
+
+
+GO
+ALTER TABLE [dbo].[Payment_]
+    ADD CONSTRAINT [FK_Payment__NutritionPlan] FOREIGN KEY ([PlanId]) REFERENCES [dbo].[NutritionPlan] ([NutriPlanId]);
+
+
+GO
+PRINT N'Creating Foreign Key [dbo].[FK_Payment__UserDetails]...';
+
+
+GO
+ALTER TABLE [dbo].[Payment_]
+    ADD CONSTRAINT [FK_Payment__UserDetails] FOREIGN KEY ([UserId]) REFERENCES [dbo].[UserDetails] ([UserId]);
 
 
 GO
@@ -443,7 +496,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-PRINT('Post Deployment')
+PRINT('Post deployment')
 GO
 
 GO

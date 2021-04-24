@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Bank](
+    [NId] [bigint] NOT NULL,
+    [Bank_Name] [varchar](50) NOT NULL,
+    [Branch] [varchar](50) NOT NULL,
+    [Balance] [int] NOT NULL,
+ CONSTRAINT [PK_Bank] PRIMARY KEY CLUSTERED 
+(
+    [NId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

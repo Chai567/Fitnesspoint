@@ -11,7 +11,7 @@ namespace Fitnesspoint.Db.DbOperations
         //saveWeight() saves WeightLog in the database
         public WeightLog saveWeight(WeightLogModel weight)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //Creating WieghtLog object and assigning data using WeightLogModel class
@@ -36,7 +36,7 @@ namespace Fitnesspoint.Db.DbOperations
         //findAllWeight() returns the list of WeightLogModel Objects
         public List<WeightLogModel> findAllWeight()
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
 
@@ -60,7 +60,7 @@ namespace Fitnesspoint.Db.DbOperations
         //findWeight() returns the WeightLog based on WeightId
         public WeightLogModel findWeight(int weight_id)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving weightLog from the database WeightLog
@@ -97,7 +97,7 @@ namespace Fitnesspoint.Db.DbOperations
         //updateWeight() update the WeightLogs based on WeightId and WeightLogModel
         public bool updateWeight(int weight_id, WeightLogModel weight)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving weightLog from the database WeightLog based on WeightId
@@ -120,7 +120,7 @@ namespace Fitnesspoint.Db.DbOperations
         //deleteWeight() deletes the WeightLogs based on WeightId and WeightLogModel
         public bool deleteWeight(int weight_id, WeightLogModel weight)
         {
-            //open a connection to a database ProjectDB
+            //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving weightLog from the database WeightLog based on WeightId

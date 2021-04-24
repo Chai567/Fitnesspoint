@@ -1,5 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="FitnesspointDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="NId" />
+    </Key>
+    <Property Name="NId" Type="bigint" Nullable="false" />
+    <Property Name="Bank_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Branch" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Balance" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DietPlan">
+    <Key>
+      <PropertyRef Name="DietId" />
+    </Key>
+    <Property Name="DietId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Slots" Type="int" Nullable="false" />
+    <Property Name="FoodType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FatRatio" Type="int" Nullable="false" />
+    <Property Name="CarbsRatio" Type="int" Nullable="false" />
+    <Property Name="ProteinRatio" Type="int" Nullable="false" />
+    <Property Name="TotalCalorie" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExerciseDetail">
+    <Key>
+      <PropertyRef Name="ExerciseID" />
+    </Key>
+    <Property Name="ExerciseID" Type="int" Nullable="false" />
+    <Property Name="ExerciseType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExerciseFor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalSet" Type="int" Nullable="false" />
+    <Property Name="Rest" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Focus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Equipement" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Time" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExerciseName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
   <EntityType Name="NutritionPlan">
     <Key>
       <PropertyRef Name="NutriPlanId" />
@@ -11,23 +48,23 @@
     <Property Name="Updated_At" Type="datetime" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Payment">
+  <EntityType Name="Payment_">
     <Key>
-      <PropertyRef Name="UserId" />
+      <PropertyRef Name="TransactionId" />
     </Key>
-    <Property Name="TransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Payment1" Type="int" />
-    <Property Name="Discount" Type="int" Nullable="false" />
+    <Property Name="TransactionId" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
     <Property Name="PlanId" Type="int" Nullable="false" />
-    <Property Name="NationalId" Type="bigint" Nullable="false" />
+    <Property Name="Payment1" Type="int" Nullable="false" />
+    <Property Name="Discount" Type="int" Nullable="false" />
+    <Property Name="NationalId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Payment_cred">
     <Key>
       <PropertyRef Name="Nid" />
     </Key>
     <Property Name="DebitCardNo" Type="int" Nullable="false" />
-    <Property Name="CreditCardNo" Type="int" Nullable="false" />
+    <Property Name="Balance" Type="int" Nullable="false" />
     <Property Name="Expiry_Month" Type="int" Nullable="false" />
     <Property Name="Expiry_Year" Type="int" Nullable="false" />
     <Property Name="cvv" Type="int" Nullable="false" />
@@ -64,7 +101,19 @@
     <Property Name="Updated_At" Type="datetime" Nullable="false" />
     <Property Name="UserId" Type="int" />
   </EntityType>
-  <Association Name="FK__WeightLog__UserI__300424B4">
+  <Association Name="FK__ExerciseD__UserI__34C8D9D1">
+    <End Role="UserDetails" Type="Self.UserDetails" Multiplicity="0..1" />
+    <End Role="ExerciseDetail" Type="Self.ExerciseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ExerciseDetail">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeightLog__UserI__38996AB5">
     <End Role="UserDetails" Type="Self.UserDetails" Multiplicity="0..1" />
     <End Role="WeightLog" Type="Self.WeightLog" Multiplicity="*" />
     <ReferentialConstraint>
@@ -72,6 +121,42 @@
         <PropertyRef Name="UserId" />
       </Principal>
       <Dependent Role="WeightLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DietPlan_User">
+    <End Role="UserDetails" Type="Self.UserDetails" Multiplicity="1" />
+    <End Role="DietPlan" Type="Self.DietPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="DietPlan">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment__NutritionPlan">
+    <End Role="NutritionPlan" Type="Self.NutritionPlan" Multiplicity="1" />
+    <End Role="Payment_" Type="Self.Payment_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NutritionPlan">
+        <PropertyRef Name="NutriPlanId" />
+      </Principal>
+      <Dependent Role="Payment_">
+        <PropertyRef Name="PlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment__UserDetails">
+    <End Role="UserDetails" Type="Self.UserDetails" Multiplicity="1" />
+    <End Role="Payment_" Type="Self.Payment_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Payment_">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
@@ -89,14 +174,33 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="FitnesspointDatabaseModelStoreContainer">
+    <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DietPlan" EntityType="Self.DietPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExerciseDetail" EntityType="Self.ExerciseDetail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NutritionPlan" EntityType="Self.NutritionPlan" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment_" EntityType="Self.Payment_" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Payment_cred" EntityType="Self.Payment_cred" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WeightLog" EntityType="Self.WeightLog" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__WeightLog__UserI__300424B4" Association="Self.FK__WeightLog__UserI__300424B4">
+    <AssociationSet Name="FK__ExerciseD__UserI__34C8D9D1" Association="Self.FK__ExerciseD__UserI__34C8D9D1">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="ExerciseDetail" EntitySet="ExerciseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeightLog__UserI__38996AB5" Association="Self.FK__WeightLog__UserI__38996AB5">
       <End Role="UserDetails" EntitySet="UserDetails" />
       <End Role="WeightLog" EntitySet="WeightLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DietPlan_User" Association="Self.FK_DietPlan_User">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="DietPlan" EntitySet="DietPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment__NutritionPlan" Association="Self.FK_Payment__NutritionPlan">
+      <End Role="NutritionPlan" EntitySet="NutritionPlan" />
+      <End Role="Payment_" EntitySet="Payment_" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment__UserDetails" Association="Self.FK_Payment__UserDetails">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="Payment_" EntitySet="Payment_" />
     </AssociationSet>
     <AssociationSet Name="FK_Payment_cred_Payment_cred" Association="Self.FK_Payment_cred_Payment_cred">
       <End Role="Payment_cred" EntitySet="Payment_cred" />

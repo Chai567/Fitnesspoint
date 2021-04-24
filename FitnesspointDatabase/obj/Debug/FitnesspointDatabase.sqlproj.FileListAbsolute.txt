@@ -1,5 +1,6 @@
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb

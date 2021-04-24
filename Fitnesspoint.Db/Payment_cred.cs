@@ -15,7 +15,7 @@ namespace Fitnesspoint.Db
     public partial class Payment_cred
     {
         public int DebitCardNo { get; set; }
-        public int CreditCardNo { get; set; }
+        public int Balance { get; set; }
         public int Expiry_Month { get; set; }
         public int Expiry_Year { get; set; }
         public int cvv { get; set; }

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DietPlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NutritionPlanController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -197,6 +198,12 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\Home\BodyType.cshtml" />
     <Content Include="Views\Home\WorkOutIdeas.cshtml" />
+    <Content Include="Views\DietPlan\createDietPlan.cshtml" />
+    <Content Include="Views\DietPlan\listAllDietPlans.cshtml" />
+    <Content Include="Views\DietPlan\listDietPlan.cshtml" />
+    <Content Include="Views\DietPlan\changeDietPlan.cshtml" />
+    <Content Include="Views\DietPlan\removeDietPlan.cshtml" />
+    <Content Include="Views\DietPlan\showCalorieContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

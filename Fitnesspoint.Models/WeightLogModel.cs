@@ -33,12 +33,12 @@ namespace Fitnesspoint.Models
         public System.DateTime Updated_At { get; set; }
 
         //UserId is required.
-        [Required(ErrorMessage = "User Id is required.")]
+       
         //Display UserID as User Id
         [Display(Name = "User Id")]
         public int? UserId { get; set; }
 
-        public virtual UserDetailModel User { get; set; }
+        public virtual UserModel User { get; set; }
     }
 
 }

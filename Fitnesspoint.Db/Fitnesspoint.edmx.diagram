@@ -4,14 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3da2d04a6eed4810bd6928b49cc6a319" Name="Diagram1">
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.NutritionPlan" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Payment" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Payment_cred" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.UserDetail" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.WeightLog" Width="1.5" PointX="5" PointY="2" IsExpanded="true" />
+      <Diagram DiagramId="ba94b33db71c4307bb8e21f90dae9998" Name="Diagram1">
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Bank" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.DietPlan" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.ExerciseDetail" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.NutritionPlan" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Payment_" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Payment_cred" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.UserDetail" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesspointDatabaseModel.WeightLog" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="FitnesspointDatabaseModel.FK_DietPlan_User" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesspointDatabaseModel.FK__ExerciseD__UserI__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesspointDatabaseModel.FK_Payment__NutritionPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesspointDatabaseModel.FK_Payment__UserDetails" ManuallyRouted="false" />
         <AssociationConnector Association="FitnesspointDatabaseModel.FK_Payment_cred_Payment_cred" ManuallyRouted="false" />
-        <AssociationConnector Association="FitnesspointDatabaseModel.FK__WeightLog__UserI__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesspointDatabaseModel.FK__WeightLog__UserI__38996AB5" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

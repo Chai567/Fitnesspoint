@@ -1,6 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="FitnesspointDatabaseModelStoreContainer" CdmEntityContainer="FitnesspointDatabaseEntities">
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="NId" ColumnName="NId" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DietPlans">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.DietPlan">
+        <MappingFragment StoreEntitySet="DietPlan">
+          <ScalarProperty Name="DietId" ColumnName="DietId" />
+          <ScalarProperty Name="Slots" ColumnName="Slots" />
+          <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+          <ScalarProperty Name="FatRatio" ColumnName="FatRatio" />
+          <ScalarProperty Name="CarbsRatio" ColumnName="CarbsRatio" />
+          <ScalarProperty Name="ProteinRatio" ColumnName="ProteinRatio" />
+          <ScalarProperty Name="TotalCalorie" ColumnName="TotalCalorie" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExerciseDetails">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.ExerciseDetail">
+        <MappingFragment StoreEntitySet="ExerciseDetail">
+          <ScalarProperty Name="ExerciseID" ColumnName="ExerciseID" />
+          <ScalarProperty Name="ExerciseType" ColumnName="ExerciseType" />
+          <ScalarProperty Name="ExerciseFor" ColumnName="ExerciseFor" />
+          <ScalarProperty Name="TotalSet" ColumnName="TotalSet" />
+          <ScalarProperty Name="Rest" ColumnName="Rest" />
+          <ScalarProperty Name="Focus" ColumnName="Focus" />
+          <ScalarProperty Name="Equipement" ColumnName="Equipement" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ExerciseName" ColumnName="ExerciseName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="NutritionPlans">
       <EntityTypeMapping TypeName="FitnesspointDatabaseModel.NutritionPlan">
         <MappingFragment StoreEntitySet="NutritionPlan">
@@ -13,14 +53,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Payments">
-      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment">
-        <MappingFragment StoreEntitySet="Payment">
+    <EntitySetMapping Name="Payment_">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment_">
+        <MappingFragment StoreEntitySet="Payment_">
           <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
-          <ScalarProperty Name="Payment1" ColumnName="Payment1" />
-          <ScalarProperty Name="Discount" ColumnName="Discount" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="Payment1" ColumnName="Payment1" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
           <ScalarProperty Name="NationalId" ColumnName="NationalId" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -29,7 +69,7 @@
       <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment_cred">
         <MappingFragment StoreEntitySet="Payment_cred">
           <ScalarProperty Name="DebitCardNo" ColumnName="DebitCardNo" />
-          <ScalarProperty Name="CreditCardNo" ColumnName="CreditCardNo" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
           <ScalarProperty Name="Expiry_Month" ColumnName="Expiry_Month" />
           <ScalarProperty Name="Expiry_Year" ColumnName="Expiry_Year" />
           <ScalarProperty Name="cvv" ColumnName="cvv" />

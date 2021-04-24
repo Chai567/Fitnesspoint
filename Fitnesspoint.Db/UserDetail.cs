@@ -17,6 +17,9 @@ namespace Fitnesspoint.Db
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserDetail()
         {
+            this.DietPlans = new HashSet<DietPlan>();
+            this.ExerciseDetails = new HashSet<ExerciseDetail>();
+            this.Payment_ = new HashSet<Payment_>();
             this.WeightLogs = new HashSet<WeightLog>();
         }
     
@@ -36,6 +39,12 @@ namespace Fitnesspoint.Db
         public string Role { get; set; }
         public Nullable<int> Diet_Plan_id { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DietPlan> DietPlans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ExerciseDetail> ExerciseDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment_> Payment_ { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WeightLog> WeightLogs { get; set; }
     }

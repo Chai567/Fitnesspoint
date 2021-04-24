@@ -1,0 +1,69 @@
+﻿@model Fitnesspoint.Models.DietPlanModel
+@{
+    ViewBag.Title = "listDietPlan";
+}
+
+<h2>List Diet Plan</h2>
+
+<div>
+    @*<h4>DietPlanModel</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Slots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoodType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoodType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatRatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarbsRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarbsRatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProteinRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProteinRatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+
+
+<p>
+    @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = Model.DietId }) |
+    @Html.ActionLink("List All Diet Plans", "listAllDietPlans")
+</p>
+
+

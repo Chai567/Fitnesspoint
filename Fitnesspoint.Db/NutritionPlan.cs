@@ -14,11 +14,20 @@ namespace Fitnesspoint.Db
     
     public partial class NutritionPlan
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NutritionPlan()
+        {
+            this.Payment_ = new HashSet<Payment_>();
+        }
+    
         public int NutriPlanId { get; set; }
         public string Name { get; set; }
         public string PlanDescription { get; set; }
         public System.DateTime Created_At { get; set; }
         public System.DateTime Updated_At { get; set; }
         public int Price { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment_> Payment_ { get; set; }
     }
 }
