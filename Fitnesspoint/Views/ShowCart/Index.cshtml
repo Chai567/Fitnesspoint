@@ -1,0 +1,56 @@
+﻿@using System.Data
+<div class="jumbotron" style="background-color:white">
+    <p align="right">
+        <i class="fa" style="font-size:25px">&#xf07a;</i>
+        <span>@ViewBag.cartnumber</span>
+    </p>
+   
+    <h3>@Html.ActionLink("Add More", "ChooseGoal", "Exercise")</h3>
+    <font color="RED">@TempData["msg"].ToString()</font>
+
+
+</div>
+
+
+<!--creating table with heading-->
+<div class="jumbotron" style="background-color:white">
+    <h2>Cart Iteam Details</h2>
+    <font size="3" face="verdana">
+        <table border="1" align="center" width="100%" bordercolor="maroon">
+            <tr>
+                <th>S.No</th>
+                <th>Exercise Type</th>
+                <th>Exercise For</th>
+                <th>Total Set</th>
+                <th>Rest</th>
+                <th>Focus</th>
+                <th>Equipement</th>
+                <th>Time</th>
+                <th>Exercise Name</th>
+                <th>Action</th>
+
+
+            </tr>
+            @foreach (DataRow row in Model.Rows)
+            {
+                <!-- showing records in table form-->
+                <tr>
+                    <td>@row["sno"]</td>
+                    <td>@row["exercisetype"]</td>
+                    <td>@row["exercisefor"]</td>
+                    <td>@row["totalset"]</td>
+                    <td>@row["rest"]</td>
+                    <td>@row["focus"]</td>
+                    <td>@row["equipement"]</td>
+                    <td>@row["time"]</td>
+                    <td>@row["exercisename"]</td>
+                    <td>@Html.ActionLink("Remove", "Index", "Remove", routeValues: new { sno = row["sno"].ToString(), }, htmlAttributes: null)</td>
+
+
+                </tr>
+            }
+        </table>
+    </font>
+    </div>
+
+

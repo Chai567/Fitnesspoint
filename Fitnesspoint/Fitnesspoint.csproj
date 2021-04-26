@@ -128,10 +128,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddCartController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DietPlanController.cs" />
+    <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NutritionPlanController.cs" />
+    <Compile Include="Controllers\RemoveController.cs" />
+    <Compile Include="Controllers\ShowCartController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WeightLogController.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,10 +210,17 @@
     <Content Include="Views\DietPlan\showCalorieContent.cshtml" />
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\Home\AllergiesAndIntolerances.cshtml" />
+    <Content Include="Views\Exercise\Exercise.cshtml" />
+    <Content Include="Views\Exercise\FatLoss.cshtml" />
+    <Content Include="Views\Exercise\MuscleGain.cshtml" />
+    <Content Include="Views\Exercise\ChooseGoal.cshtml" />
+    <Content Include="Views\AddCart\AddCart.cshtml" />
+    <Content Include="Views\ShowCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Remove\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

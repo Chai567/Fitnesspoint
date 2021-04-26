@@ -13,3 +13,13 @@ C:\Users\rohit.patidar\source\new\FitnesspointDatabase\obj\Debug\Model.xml
 C:\Users\rohit.patidar\source\new\FitnesspointDatabase\obj\Debug\refactor.xml
 C:\Users\rohit.patidar\source\new\FitnesspointDatabase\obj\Debug\postdeploy.sql
 C:\Users\rohit.patidar\source\new\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\Model.xml
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\refactor.xml
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\postdeploy.sql
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb

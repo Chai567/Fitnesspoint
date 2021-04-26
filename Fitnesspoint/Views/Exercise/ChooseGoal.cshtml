@@ -1,0 +1,54 @@
+﻿@model Fitnesspoint.Models.ExerciseDetails
+
+<div class="jumbotron" style="background-color:white">
+    <p align="right">
+        <i class="fa" style="font-size:25px">&#xf07a;</i>
+        <span>@ViewBag.cartnumber</span>
+    </p>
+    <h2>Choose Your Goal&raquo;</h2>
+</div>
+@if (Model != null)
+{
+    if (Model.productlist.Count > 0)
+    {
+        //creating table to show data which are retrive
+<div class="jumbotron" style="background-color:white">
+    <font size="4" face="verdana">
+        <table border="1" align="center" width="100%" bordercolor="maroon">
+            <tr>
+                <th>Exercise Type</th>
+                <th>Exercise For</th>
+                <!--<th>Total Set</th>
+                <th>Rest</th>
+                <th>Focus</th>
+                <th>Equipement</th>
+                        <th>Time</th>  -->
+                <th>Exercise Name</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var item in Model.productlist)
+            {
+                <tr>
+                    <!--Display the data which are retrive-->
+                    <td>@Html.DisplayFor(m => item.exercisetype)</td>
+                    <td>@Html.DisplayFor(m => item.exercisefor)</td>
+                    <!-- <td>@Html.DisplayFor(m => item.totalset)</td>
+                    <td>@Html.DisplayFor(m => item.rest)</td>
+                    <td>@Html.DisplayFor(m => item.focus)</td>
+                    <td>@Html.DisplayFor(m => item.equipement)</td>
+                           <td>@Html.DisplayFor(m => item.time)</td>-->
+                    <td>@Html.DisplayFor(m => item.exercisename)</td>
+                    <!-- Anchor to go back -->
+                    <td>@Html.ActionLink("Add to Cart", "AddCart", "AddCart", routeValues: new { exerciseid = item.exerciseid, }, htmlAttributes: null)</td>
+                </tr>
+            }
+        </table>
+    </font>
+</div>
+            }
+            else
+            {
+            <b>No Details Found.</b>
+            }
+            }
+

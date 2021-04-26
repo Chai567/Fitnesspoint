@@ -15,3 +15,9 @@ C:\Users\rohit.patidar\source\new\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Mod
 C:\Users\rohit.patidar\source\new\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
 C:\Users\rohit.patidar\source\new\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.dll
 C:\Users\rohit.patidar\source\new\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.dll
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.pdb
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csprojAssemblyReference.cache
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.dll
+C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb
