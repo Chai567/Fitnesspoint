@@ -3,12 +3,12 @@
     ViewBag.Title = "listDietPlan";
 }
 
-<h2>List Diet Plan</h2>
+<h2 style="color:antiquewhite">  Plan Detail</h2>
 
-<div>
+
     @*<h4>DietPlanModel</h4>*@
-    <hr />
-    <dl class="dl-horizontal">
+    
+    <dl class="dl-horizontal" style="background-color:antiquewhite">
         <dt>
             @Html.DisplayNameFor(model => model.Slots)
         </dt>
@@ -58,12 +58,14 @@
         </dd>
 
     </dl>
-</div>
 
-
-<p>
-    @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = Model.DietId }) |
-    @Html.ActionLink("List All Diet Plans", "listAllDietPlans")
-</p>
+    <p style="font-size:large;font-weight:900;text-align:left">
+        @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = Model.DietId })
+    </p>
+     &nbsp;
+    <p style="font-size:large;font-weight:900;text-align:right">
+         
+        @Html.ActionLink("List All Diet Plans", "listAllDietPlans")
+    </p>
 
 

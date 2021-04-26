@@ -4,7 +4,7 @@
     ViewBag.Title = "changeDietPlan";
 }
 
-<h2>Change Diet Plan</h2>
+<h2 style="color:antiquewhite">Edit Diet Plan</h2>
 
 @using (Html.BeginForm())
 {
@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.DietId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Slots, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Slots, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Slots, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Slots, "", new { @class = "text-danger" })
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FoodType, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FoodType, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FoodType, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FoodType, "", new { @class = "text-danger" })
@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FatRatio, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FatRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FatRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FatRatio, "", new { @class = "text-danger" })
@@ -41,7 +41,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CarbsRatio, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CarbsRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CarbsRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CarbsRatio, "", new { @class = "text-danger" })
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProteinRatio, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ProteinRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProteinRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProteinRatio, "", new { @class = "text-danger" })
@@ -59,7 +59,7 @@
 
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
@@ -68,14 +68,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Update Diet Plan" class="btn btn-default" />
+                <input type="submit" value="Update Diet Plan" class="btn btn-primary lg" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("List All Diet Plans", "listAllDietPlans")
+    <p style="font-weight:900;font-size:large;text-align:right">@Html.ActionLink("List All Diet Plans", "listAllDietPlans")</p>
 </div>
 
  

@@ -55,12 +55,13 @@ namespace Fitnesspoint.Controllers
             if (ModelState.IsValid)
             {
                 int id = Repository.AddUser(model);
+                ViewBag.Message = "You are registered";
                 if (id > 0)
                 {
                     ModelState.Clear();
 
                 }
-                return RedirectToAction("Login", "Home");
+                return RedirectToAction("Login", "Account");
             }
             var List = new List<string>()
             {

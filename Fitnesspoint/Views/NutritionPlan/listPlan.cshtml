@@ -4,9 +4,9 @@
     ViewBag.Title = "listPlan";
 }
 
-<h2>List Plan</h2>
+<h2 style="color:antiquewhite"> Plan Detail</h2>
 
-<div>
+<div class="jumbotron" style="background-color:antiquewhite">
     @*<h4>NutritionPlanModel</h4>*@
     <hr />
     @Html.HiddenFor(model => model.NutriPlanId)
@@ -38,7 +38,12 @@
         </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "changePlan", new { plan_id = Model.NutriPlanId }) |
+
+
+<p style="font-size:large;font-weight:900;text-align:left">
+    @Html.ActionLink("Edit", "changePlan", new { plan_id = Model.NutriPlanId })
+</p>
+&nbsp;
+<p style="font-size:large;font-weight:900;text-align:right">
     @Html.ActionLink("Display All Nutrition Plans", "listAllPlans")
 </p>

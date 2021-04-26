@@ -194,7 +194,7 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
-    <Content Include="Views\Shared\myLayout.cshtml" />
+    <Content Include="Views\Shared\_userLayout.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\Home\BodyType.cshtml" />
     <Content Include="Views\Home\WorkOutIdeas.cshtml" />
@@ -204,6 +204,8 @@
     <Content Include="Views\DietPlan\changeDietPlan.cshtml" />
     <Content Include="Views\DietPlan\removeDietPlan.cshtml" />
     <Content Include="Views\DietPlan\showCalorieContent.cshtml" />
+    <Content Include="Views\Shared\_adminLayout.cshtml" />
+    <Content Include="Views\Home\AllergiesAndIntolerances.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

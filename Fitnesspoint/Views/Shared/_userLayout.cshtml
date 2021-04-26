@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .navbar-rohit {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-brand" style="color:darksalmon;font-size:x-large"><b>Fitnesspoint</b> <i class='fas fa-angle-double-right'></i><i class='fas fa-angle-double-right'></i></li>
+
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" }) </li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" })</li>
+
+                    &nbsp;
+                    &nbsp;
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" })</li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-rohit" style="text-align:right">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+                        <li class="navbar-brand" style="color:darkseagreen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome,@User.Identity.Name !!</b>&nbsp;&nbsp;&nbsp;</li>
+                        <li>@Html.ActionLink("My Profile", "Welcome", "User", null, new { @class = "navbar-brand", @style = "color:yellowgreen;font-weight:bold" })&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+                        <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "navbar-brand ", @style = "color:darksalmon;font-weight:bold" })</li>
+
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="color:antiquewhite">&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

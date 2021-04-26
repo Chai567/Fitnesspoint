@@ -29,16 +29,22 @@ namespace Fitnesspoint.Controllers
 
             return View();
         }
-
+        [Authorize]
         //Methods for displaying Read More stuff on Home page
         public ActionResult BodyType()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult WorkOutIdeas()
         {
             return View();
         }
+        [Authorize]
+        public ActionResult AllergiesAndIntolerances()
+        {
+            return View();
+        }
+        
     }
 }
