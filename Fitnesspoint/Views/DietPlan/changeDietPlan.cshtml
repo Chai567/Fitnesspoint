@@ -4,7 +4,7 @@
     ViewBag.Title = "changeDietPlan";
 }
 
-<h2 style="color:antiquewhite">Edit Diet Plan</h2>
+<h2 style="color:antiquewhite;text-align:center">Edit Diet Plan</h2>
 
 @using (Html.BeginForm())
 {
@@ -75,7 +75,7 @@
 }
 
 <div>
-    <p style="font-weight:900;font-size:large;text-align:right">@Html.ActionLink("List All Diet Plans", "listAllDietPlans")</p>
+    <p style="font-weight:900;font-size:large;text-align:right">@Html.ActionLink("List All Diet Plans", "listUserDietPlan", new { user_id = Session["Id"] })</p>
 </div>
 
  

@@ -38,7 +38,7 @@
     </p>
     <p style="font-size:large;font-weight:900;text-align:right">
         &nbsp;&nbsp;
-        @Html.ActionLink("Display All Weights", "showAllWeightLog")
+        @Html.ActionLink("Display All Weights", "showUserWeightLog", new { user_id = Session["Id"] })
     </p>
 </div>
 

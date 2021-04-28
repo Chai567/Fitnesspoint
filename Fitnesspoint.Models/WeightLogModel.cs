@@ -33,7 +33,7 @@ namespace Fitnesspoint.Models
         public System.DateTime Updated_At { get; set; }
 
         //UserId is required.
-       
+
         //Display UserID as User Id
         [Display(Name = "User Id")]
         public int? UserId { get; set; }

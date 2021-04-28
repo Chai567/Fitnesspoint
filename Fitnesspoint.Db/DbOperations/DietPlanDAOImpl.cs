@@ -96,6 +96,38 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
+
+        //User Diet Plan
+
+        public List<DietPlanModel> findUserDietPlan(int user_id)
+        {
+            //open a connection to a database FitnesspointDatabase
+            using (var context = new FitnesspointDatabaseEntities())
+            {
+                //retrieving dietPlan from the database DietPlan
+                //using model DietPlanModel based on UserId
+
+                var res = context.DietPlans
+                    .Where(x => x.UserId == user_id)
+                    .Select(x => new DietPlanModel()
+                    {
+                        DietId = x.DietId,
+                        Slots = x.Slots,
+                        FoodType = x.FoodType,
+                        FatRatio = x.FatRatio,
+                        CarbsRatio = x.CarbsRatio,
+                        ProteinRatio = x.ProteinRatio,
+                        TotalCalorie = x.TotalCalorie,
+                        UserId = x.UserId
+                    }).ToList();
+
+
+                return res;
+            }
+
+
+        }
+
         //updateDietPlan() update the DietPlans based on DietId and DietPlanModel
         public bool updateDietPlan(int diet_id, DietPlanModel dietPlan)
         {

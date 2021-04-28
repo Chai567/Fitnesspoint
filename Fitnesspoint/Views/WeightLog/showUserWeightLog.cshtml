@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<Fitnesspoint.Models.WeightLogModel>
 
 @{
-    ViewBag.Title = "showAllWeightLog";
+    ViewBag.Title = "showUserWeightLog";
 }
 
-<h2 style="color:antiquewhite;text-align:center">All User Weights</h2>
+<h2 style="color:antiquewhite">Show All WeightLog</h2>
 
-
+<p style="font-size:large;font-weight:900;text-align:left">
+    @Html.ActionLink("Create New Weight", "addWeightLog")
+</p>
 <table class="table jumbotron" style="background-color:antiquewhite">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.UserId)
         </th>
@@ -28,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.UserId)
             </td>
             <td>
-                @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId },new { @class="btn btn-primary lg btn-warning"}) 
+                @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
                 @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
                 @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
             </td>

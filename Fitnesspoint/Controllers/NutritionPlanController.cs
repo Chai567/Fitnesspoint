@@ -53,6 +53,16 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
+        // GET: NutritionPlan/listUserAllPlans
+        [HttpGet]
+        public ActionResult listUserAllPlans()
+        {
+            //fetch data from all nutrition plans present in the database 
+            var result = impl.findAllNutritionPlan();
+            //pass the fetched data to View
+            return View(result);
+        }
+
         //GET: NutritionPlan/listPlan/plan_id
         public ActionResult listPlan(int plan_id)
         {

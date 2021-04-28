@@ -64,8 +64,8 @@
     </p>
      &nbsp;
     <p style="font-size:large;font-weight:900;text-align:right">
-         
-        @Html.ActionLink("List All Diet Plans", "listAllDietPlans")
+
+        @Html.ActionLink("List All Diet Plans", "listUserDietPlan", new { user_id = Session["Id"] })
     </p>
 
 

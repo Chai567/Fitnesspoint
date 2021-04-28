@@ -53,6 +53,17 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
+
+        //GET: DietPlan/listUserDietPlan/user_id
+        public ActionResult listUserDietPlan(int user_id)
+        {
+            //fetch data from diet plan having UserId equals to user_id present in the database 
+            var dietPlans = impl.findUserDietPlan(user_id);
+            //pass the fetched data to View
+            return View(dietPlans);
+
+        }
+
         //GET: DietPlan/listDietPlan/diet_id
         public ActionResult listDietPlan(int diet_id)
         {
@@ -92,8 +103,8 @@ namespace Fitnesspoint.Controllers
             {
                 //update data in the database based on DietId 
                 impl.updateDietPlan(dietPlan.DietId, dietPlan);
-                //redirect to DietPlan/listAllDietPlans
-                return RedirectToAction("listAllDietPlans");
+                //redirect to DietPlan/listUserDietPlan
+                return RedirectToAction("listUserDietPlan", new { user_id = Session["Id"] });
 
             }
             return View();
@@ -119,8 +130,8 @@ namespace Fitnesspoint.Controllers
             {
                 //delete data in the database based on DietId 
                 impl.deleteDietPlan(dietPlan.DietId, dietPlan);
-                //redirect to DietPlan/listAllDietPlans
-                return RedirectToAction("listAllDietPlans");
+                //redirect to DietPlan/listUserDietPlan
+                return RedirectToAction("listUserDietPlan", new { user_id = Session["Id"] });
             }
             return View();
 
