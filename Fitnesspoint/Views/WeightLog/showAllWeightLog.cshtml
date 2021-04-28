@@ -12,6 +12,14 @@
         <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Created_At)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Updated_At)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.UserId)
         </th>
@@ -20,19 +28,27 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId },new { @class="btn btn-primary lg btn-warning"}) 
-                @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
-                @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Weight)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Created_At)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Updated_At)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserId)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
+        @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
+        @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
+    </td>
+</tr>
     }
 
 </table>

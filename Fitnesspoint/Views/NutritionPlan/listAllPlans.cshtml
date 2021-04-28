@@ -22,29 +22,46 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Price)
                 </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Created_At)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Updated_At)
+                </th>
+
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                <tr>
+        <tr>
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PlanDescription)
-                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlanDescription)
+            </td>
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "changePlan", new { plan_id = item.NutriPlanId }) |
-                        @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }) |
-                        @Html.ActionLink("Delete", "removePlan", new { plan_id = item.NutriPlanId })
-                    </td>
-                </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Created_At)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Updated_At)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "changePlan", new { plan_id = item.NutriPlanId }) |
+                @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }) |
+                @Html.ActionLink("Delete", "removePlan", new { plan_id = item.NutriPlanId })
+            </td>
+        </tr>
             }
 
         </table>
