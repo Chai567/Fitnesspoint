@@ -23,3 +23,9 @@ C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\postdepl
 C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\predeploy.sql
 C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\Azhar Ali\source\New Change pro\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb

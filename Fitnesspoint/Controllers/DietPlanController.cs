@@ -10,6 +10,8 @@ namespace Fitnesspoint.Controllers
     public class DietPlanController : Controller
     {
         DietPlanDAOImpl impl = null;
+        
+        //Constructor
         public DietPlanController()
         {
             impl = new DietPlanDAOImpl();

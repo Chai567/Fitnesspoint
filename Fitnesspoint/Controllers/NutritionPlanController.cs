@@ -11,11 +11,15 @@ namespace Fitnesspoint.Controllers
     public class NutritionPlanController : Controller
     {
         NutritionPlanDAOImpl impl = null;
+        
+        
+        //CONSTRUCTOR
         public NutritionPlanController()
         {
             impl = new NutritionPlanDAOImpl();
         }
 
+        
         // GET: NutritionPlan/createNutritionPlan
         public ActionResult createNutritionPlan()
         {
@@ -43,6 +47,8 @@ namespace Fitnesspoint.Controllers
 
         }
 
+       
+        
         // GET: NutritionPlan/listAllPlans
         [HttpGet]
         public ActionResult listAllPlans()
@@ -53,6 +59,8 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
+       
+        
         // GET: NutritionPlan/listUserAllPlans
         [HttpGet]
         public ActionResult listUserAllPlans()

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Fitnesspoint.Controllers
 {
@@ -41,7 +42,7 @@ namespace Fitnesspoint.Controllers
                         dr = dt.NewRow();
                         // Establishing the connection wata database 
                         // Connection by server name and database name
-                        String mycon = "Data Source=Desktop-91hfn1k ;Initial Catalog=Exercise;Integrated Security=True";
+                        string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
                         SqlConnection scon = new SqlConnection(mycon);
                         String myquery = "select * from exercisedetail where exerciseid=" + Request.QueryString["exerciseid"];
                         SqlCommand cmd = new SqlCommand();
@@ -67,6 +68,8 @@ namespace Fitnesspoint.Controllers
                         // GridView1.DataBind();
                         Session["buyitems"] = dt;
                     }
+                   
+                    
                     //if records are already added
                     // adding more record 
                     else
@@ -79,7 +82,7 @@ namespace Fitnesspoint.Controllers
                         dr = dt.NewRow();
                         // Establishing the connection wata database 
                         // Connection by server name and database name
-                        String mycon = "Data Source=Desktop-91hfn1k ;Initial Catalog=Exercise;Integrated Security=True";
+                        string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
                         SqlConnection scon = new SqlConnection(mycon);
                         String myquery = "select * from exercisedetail where exerciseid=" + Request.QueryString["exerciseid"];
                         SqlCommand cmd = new SqlCommand();

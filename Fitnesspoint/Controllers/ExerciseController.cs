@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using Fitnesspoint.Models;
 using Fitnesspoint.Db;
 using Fitnesspoint.Db.DbOperations;
+using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 
 namespace Fitnesspoint.Controllers
 {
@@ -35,7 +37,8 @@ namespace Fitnesspoint.Controllers
 
             // Establishing the connection wata database 
             // Connection by server name and database name
-            String mycon = "Data Source=Desktop-91hfn1k ;Initial Catalog=Exercise;Integrated Security=True";
+            
+            string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
             String myquery = "Select * from exercisedetail";
             SqlConnection con = new SqlConnection(mycon);
             SqlCommand cmd = new SqlCommand();
@@ -52,7 +55,7 @@ namespace Fitnesspoint.Controllers
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 ExerciseDetails pd = new ExerciseDetails();
-
+                
                 pd.exerciseid = Convert.ToInt32(ds.Tables[0].Rows[i]["exerciseid"].ToString());
                 pd.exercisetype = ds.Tables[0].Rows[i]["exercisetype"].ToString();
                 pd.exercisefor = ds.Tables[0].Rows[i]["exercisefor"].ToString();

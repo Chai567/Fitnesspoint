@@ -11,11 +11,15 @@ namespace Fitnesspoint.Controllers
     public class WeightLogController : Controller
     {
         WeightLogDAOImpl impl = null;
+
+        //CONSTRUCTOR
         public WeightLogController()
         {
             impl = new WeightLogDAOImpl();
         }
 
+        
+        
         // GET: WeightLog/addWeightLog
         public ActionResult addWeightLog()
         {
@@ -36,12 +40,15 @@ namespace Fitnesspoint.Controllers
                 ViewBag.Message = "Weight Inserted successfully";
                 //deletes the data from model
                 ModelState.Clear();
+                
 
             }
             return View();
 
         }
 
+        
+        
         // GET: WeightLog/showAllWeightLog
         [HttpGet]
         public ActionResult showAllWeightLog()
@@ -52,9 +59,12 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
+        
+        
         // GET: WeightLog/showUserWeightLog/user_id
         public ActionResult showUserWeightLog(int user_id)
         {
+            
             //fetch data from weight log having UserId equals to user_id present in the database 
             var weightLogs = impl.findUserWeight(user_id);
             //pass the fetched data to View

@@ -54,3 +54,17 @@ C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Db\obj\Debug\Fitnesspoint.
 C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csproj.CopyComplete
 C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.dll
 C:\Users\Azhar Ali\source\New Change pro\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.dll.config
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Db.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\EntityFramework.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Models.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\Fitnesspoint.Models.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\EntityFramework.xml
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csproj.CoreCompileInputs.cache
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.csproj.CopyComplete
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Db\obj\Debug\Fitnesspoint.Db.pdb

@@ -36,7 +36,7 @@ namespace Fitnesspoint.Controllers
 
             if (sdr.Read())
             {
-                string Id = sdr["UserId"].ToString();
+                int Id = Convert.ToInt32(sdr["UserId"]);
                 string N = sdr["Name"].ToString();
                 string G = sdr["Gender"].ToString();
                 string D = sdr["DOB"].ToString();

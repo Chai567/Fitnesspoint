@@ -4,11 +4,9 @@
     ViewBag.Title = "showUserWeightLog";
 }
 
-<h2 style="color:antiquewhite">Show All WeightLog</h2>
+<h2 style="color:antiquewhite"><b>Your WeightLog</b></h2>
 
-<p style="font-size:large;font-weight:900;text-align:left">
-    @Html.ActionLink("Create New Weight", "addWeightLog")
-</p>
+
 <table class="table jumbotron" style="background-color:antiquewhite">
     <tr>
         <th>
@@ -16,16 +14,9 @@
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.Created_At)
-        </th>
-
-        <th>
             @Html.DisplayNameFor(model => model.Updated_At)
         </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
-        </th>
         <th></th>
     </tr>
 
@@ -37,21 +28,16 @@
     </td>
 
     <td>
-        @Html.DisplayFor(modelItem => item.Created_At)
-    </td>
-
-    <td>
         @Html.DisplayFor(modelItem => item.Updated_At)
     </td>
+    
     <td>
-        @Html.DisplayFor(modelItem => item.UserId)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
-        @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
         @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
     </td>
 </tr>
     }
 
 </table>
+<p style="font-size:large;font-weight:900;text-align:right">
+    @Html.ActionLink("Add Weight", "addWeightLog")
+</p>
