@@ -29,3 +29,13 @@ C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\bin\Debug\
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\Model.xml
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\refactor.xml
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\postdeploy.sql
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
