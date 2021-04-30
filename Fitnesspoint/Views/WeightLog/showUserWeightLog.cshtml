@@ -4,9 +4,13 @@
     ViewBag.Title = "showUserWeightLog";
 }
 
-<h2 style="color:antiquewhite"><b>Your WeightLog</b></h2>
+<h2 style="color:antiquewhite; text-align:center"><b>User WeightLog</b></h2>
 
+<p>
+    @Html.ActionLink("Add Weight", "addWeightLog", null, new { @class = "btn btn-primary btn-lg" })
+</p>
 
+<hr />
 <table class="table jumbotron" style="background-color:antiquewhite">
     <tr>
         <th>
@@ -53,6 +57,3 @@
     }
 
 </table>
-<p style="font-size:large;font-weight:900;text-align:right">
-    @Html.ActionLink("Add Weight", "addWeightLog")
-</p>

@@ -9,29 +9,29 @@ namespace Fitnesspoint.Db.DbOperations
     public class NutritionPlanDAOImpl
     {
         //savePlan() saves NutritionPlan in the database
-        public NutritionPlan savePlan(NutritionPlanModel plan)
+        public NutritionPlan savePlan(NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //Creating NutritionPlan object and assigning data using NutritionPlanModel class
-                NutritionPlan nutritionPlan = new NutritionPlan()
+                NutritionPlan nutritionPlan1 = new NutritionPlan()
                 {
-                    Name = plan.Name,
-                    PlanDescription = plan.PlanDescription,
+                    Name = nutritionPlan.Name,
+                    PlanDescription = nutritionPlan.PlanDescription,
                     Created_At = DateTime.UtcNow,
                     Updated_At = DateTime.UtcNow,
-                    Price = plan.Price,
+                    Price = nutritionPlan.Price,
 
                 };
 
 
                 //add nutritionPlan to the database NutritionPlan using model NutritionPlan
-                context.NutritionPlans.Add(nutritionPlan);
+                context.NutritionPlans.Add(nutritionPlan1);
                 //save the changes to the database
                 context.SaveChanges();
 
-                return nutritionPlan;
+                return nutritionPlan1;
             }
 
         }
@@ -92,20 +92,20 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //updateNutritionPlan() update the NutritionPlans based on NutriPlanId and NutritionPlanModel
-        public bool updateNutritionPlan(int plan_id, NutritionPlanModel plan)
+        public bool updateNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan based on NutriPlanId
-                var nutplan = context.NutritionPlans.FirstOrDefault(x => x.NutriPlanId == plan_id);
+                var nutritionPlan1 = context.NutritionPlans.FirstOrDefault(x => x.NutriPlanId == plan_id);
                 //replace the data in the database with NutritionPlanModel data based on NutriPlanId
-                if (nutplan != null)
+                if (nutritionPlan1 != null)
                 {
-                    nutplan.Name = plan.Name;
-                    nutplan.PlanDescription = plan.PlanDescription;
-                    nutplan.Updated_At = DateTime.UtcNow;
-                    nutplan.Price = plan.Price;
+                    nutritionPlan1.Name = nutritionPlan.Name;
+                    nutritionPlan1.PlanDescription = nutritionPlan.PlanDescription;
+                    nutritionPlan1.Updated_At = DateTime.UtcNow;
+                    nutritionPlan1.Price = nutritionPlan.Price;
 
                 }
                 //save the changes to the database
@@ -116,17 +116,17 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //deleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
-        public bool deleteNutritionPlan(int plan_id, NutritionPlanModel plan)
+        public bool deleteNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
             {
                 //retrieving nutritionPlan from the database NutritionPlan based on NutriPlanId
-                var nutplan = context.NutritionPlans.FirstOrDefault(x => x.NutriPlanId == plan_id);
-                if (nutplan != null)
+                var nutritionPlan1 = context.NutritionPlans.FirstOrDefault(x => x.NutriPlanId == plan_id);
+                if (nutritionPlan1 != null)
                 {
                     //delete the data if it is present in the database
-                    context.NutritionPlans.Remove(nutplan);
+                    context.NutritionPlans.Remove(nutritionPlan1);
                     //save the changes to the database
                     context.SaveChanges();
                     //returns true if data is deleted

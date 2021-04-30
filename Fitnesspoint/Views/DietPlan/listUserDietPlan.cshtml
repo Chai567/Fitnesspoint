@@ -10,60 +10,60 @@
     @Html.ActionLink("Create New Diet Plan", "createDietPlan", null, new { @class = "btn btn-primary btn-lg" })
 </p>
 
-<div style="background-color:antiquewhite">
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Slots)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FoodType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FatRatio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CarbsRatio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProteinRatio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+<hr />
+<table class="table jumbotron" style="background-color:antiquewhite">
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Slots)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FoodType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FatRatio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CarbsRatio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProteinRatio)
-        </td>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.UserId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = item.DietId }) |
-            @Html.ActionLink("Calorie Details", "showCalorieContent", new { diet_id = item.DietId }) |
-            @Html.ActionLink("Details", "listDietPlan", new { diet_id = item.DietId }) |
-            @Html.ActionLink("Delete", "removeDietPlan", new { diet_id = item.DietId })
-        </td>
+        <th>
+            @Html.DisplayNameFor(model => model.Slots)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatRatio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarbsRatio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProteinRatio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
     </tr>
-        }
 
-    </table>
-    </div>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slots)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoodType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatRatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarbsRatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProteinRatio)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
+                @Html.ActionLink("Calorie Details", "showCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
+                @Html.ActionLink("Diet Details", "listDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-success" })
+                @Html.ActionLink("Delete", "removeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+    

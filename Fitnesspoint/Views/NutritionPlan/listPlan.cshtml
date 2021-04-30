@@ -4,13 +4,15 @@
     ViewBag.Title = "listPlan";
 }
 
-<h2 style="color:antiquewhite"> Plan Detail</h2>
+<h2 style="color:antiquewhite;text-align:center"> Plan Detail</h2>
 
-<div class="jumbotron" style="background-color:antiquewhite">
-    @*<h4>NutritionPlanModel</h4>*@
-    <hr />
-    @Html.HiddenFor(model => model.NutriPlanId)
-    <dl class="dl-horizontal">
+<hr />
+
+@*<h4>DietPlanModel</h4>*@
+
+
+@Html.HiddenFor(model => model.NutriPlanId)
+      <dl class="dl-horizontal" style="background-color:antiquewhite">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -27,8 +29,6 @@
             @Html.DisplayFor(model => model.PlanDescription)
         </dd>
 
-
-
         <dt>
             @Html.DisplayNameFor(model => model.Price)
         </dt>
@@ -36,7 +36,7 @@
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
-    </dl>
-</div>
+      </dl>
+        
 
 
