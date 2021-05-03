@@ -15,7 +15,7 @@ namespace Fitnesspoint.Models
         public string Name { get; set; }
 
 
-        [Required(ErrorMessage = "Enter your Gender")]
+        [Required(ErrorMessage = "Select your Gender")]
         public string Gender { get; set; }
 
 
@@ -50,6 +50,8 @@ namespace Fitnesspoint.Models
         public string Role { get; set; }
 
         public string Goal { get; set; }
+
+        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Invalid Mobile Number.")]
         public long Contact { get; set; }
 
     }

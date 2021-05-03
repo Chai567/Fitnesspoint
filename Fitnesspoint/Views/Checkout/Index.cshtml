@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    int id = (int)ViewData["User_id"];
+    int pid = (int)ViewData["Plan_id"];
+    int price = (int)ViewData["Amount"];
+    string name = ViewData["Plan_name"].ToString();
+    long mobile = (long)ViewData["Contact"];
+}
+
+<h2 style="color:antiquewhite;font-weight:500"><b>Payment Details </b></h2>
+<hr />
+<br />
+
+<dl class="dl-horizontal" style="background-color:beige">
+    <dt style="text-align:center;font-weight:200;font-size:x-large"><b>User details</b></dt>
+    <dd></dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+    <dt>
+        Name :
+    </dt>
+    <dd>
+        @Html.ViewData["Name"]
+    </dd>
+    <dt>
+        User Id :
+    </dt>
+    <dd>
+        @Html.ViewData["User_id"]
+    </dd>
+
+    <dt>
+        Contact :
+    </dt>
+    <dd>
+        @Html.ViewData["Contact"]
+    </dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+
+    <dt>---------------------------------</dt>
+    <dd>---------------------------------</dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+
+    <dt style="text-align:center;font-weight:200;font-size:x-large"><b>Plan details</b></dt>
+    <dd></dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+    <dt>
+        Plan Id  :
+    </dt>
+
+    <dd>
+        @Html.ViewData["Plan_id"]
+    </dd>
+
+    <dt>
+        Plan name :
+    </dt>
+
+    <dd>
+        @Html.ViewData["Plan_name"]
+    </dd>
+
+    <dt>
+        Amount   :
+    </dt>
+
+    <dd>
+        @Html.ViewData["Amount"]
+    </dd>
+    <dt>&nbsp;</dt>
+    <dd></dd>
+
+</dl>
+<p>@Html.ActionLink("Proceed to Pay", "ProceedToPay", "Checkout", new { User_id = id, Plan_id = pid, Plan_name =name , Amount =price , Contact =mobile}, new { @class = "btn btn-primary lg" })</p>

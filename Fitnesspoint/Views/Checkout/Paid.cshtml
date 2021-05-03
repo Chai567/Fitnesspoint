@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Paid";
+    int order_id = (int)Session["orderid"];
+}
+
+<h2 style="color:antiquewhite">Payment Successful</h2>
+<div class="jumbotron" style="background-color:antiquewhite">
+    <h3>Your order is confirmed </h3>
+    <P style="font-size:large">your order id is <b>@order_id </b> </P>
+</div>

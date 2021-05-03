@@ -53,9 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bank.cs">
-      <DependentUpon>Fitnesspoint.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="DbOperations\DietPlanDAOImpl.cs" />
     <Compile Include="DbOperations\NutritionPlanDAOImpl.cs" />
@@ -85,10 +82,7 @@
     <Compile Include="NutritionPlan.cs">
       <DependentUpon>Fitnesspoint.tt</DependentUpon>
     </Compile>
-    <Compile Include="Payment_.cs">
-      <DependentUpon>Fitnesspoint.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Payment_cred.cs">
+    <Compile Include="PaymentTbl.cs">
       <DependentUpon>Fitnesspoint.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

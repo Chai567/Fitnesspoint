@@ -25,13 +25,12 @@ namespace Fitnesspoint.Db
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Bank> Banks { get; set; }
         public virtual DbSet<DietPlan> DietPlans { get; set; }
         public virtual DbSet<ExerciseDetail> ExerciseDetails { get; set; }
         public virtual DbSet<NutritionPlan> NutritionPlans { get; set; }
-        public virtual DbSet<Payment_> Payment_ { get; set; }
-        public virtual DbSet<Payment_cred> Payment_cred { get; set; }
+        
         public virtual DbSet<UserDetail> UserDetails { get; set; }
         public virtual DbSet<WeightLog> WeightLogs { get; set; }
+        public virtual DbSet<PaymentTbl> PaymentTbls { get; set; }
     }
 }

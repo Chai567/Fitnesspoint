@@ -1,5 +1,11 @@
 ﻿<!DOCTYPE html>
 
+                       @if (Session["role"] != null)
+                       {
+
+                           string role = Session["role"].ToString();
+
+                       }
 <html>
 
 
@@ -46,7 +52,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" }) </li>
                     <li>@Html.ActionLink("About", "About", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" })</li>
 
-                    
+
 
                     &nbsp;
                     &nbsp;
@@ -58,13 +64,14 @@
                     @if (User.Identity.IsAuthenticated)
                     {
 
-
                         <li class="navbar-brand" style="color:darkseagreen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome,@User.Identity.Name !!</b>&nbsp;&nbsp;&nbsp;</li>
                         <li>@Html.ActionLink("My Profile", "Welcome", "User", null, new { @class = "navbar-brand", @style = "color:yellowgreen;font-weight:bold" })&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                         <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "navbar-brand", @style = "color:darksalmon;font-weight:bold" })</li>
 
-
                     }
+
+
+
 
 
                 </ul>

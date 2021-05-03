@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddCartController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\DietPlanController.cs" />
     <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -152,6 +153,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\1244983.jpg" />
+    <Content Include="images\healthy eating quote.png" />
+    <Content Include="images\images-1.png" />
+    <Content Include="images\images.jfif" />
+    <Content Include="images\unnamed.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -219,6 +225,10 @@
     <Content Include="Views\WeightLog\showUserWeightLog.cshtml" />
     <Content Include="Views\NutritionPlan\listUserAllPlans.cshtml" />
     <Content Include="Views\DietPlan\listUserDietPlan.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Checkout\ProceedToPay.cshtml" />
+    <Content Include="Views\Checkout\FinalPay.cshtml" />
+    <Content Include="Views\Checkout\Paid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

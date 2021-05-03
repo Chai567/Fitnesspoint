@@ -9,21 +9,33 @@
         background-color: black;
         color: white
     }
+
+    
 </style>
 
 
 <div class="jumbotron" style="background-color:antiquewhite">
-    <h1><b>Fitnesspoint</b> <i class='fas fa-angle-double-right'></i><i class='fas fa-angle-double-right'></i></h1>
+    <h1><b>Fitnesspoint</b> <i class='fas fa-angle-double-right'></i><i class='fas fa-angle-double-right'></i> </h1>
+
     <p class="lead">Making the smart food and nutrition choices is a necessary part of everyone's daily life.</p>
 
 </div>
+@if (!User.Identity.IsAuthenticated)
+{
 <div class="jumbotron" style="background-color:azure">
-    @Html.ActionLink("Sign up >>", "Register", "Account",null, new { @class = "btn btn-primary btn-lg" })
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    @Html.ActionLink("Sign in >>", "Login", "Account",null ,new { @class = "btn btn-primary btn-lg" })
+    <p>
+        @Html.ActionLink("Sign up >>", "Register", "Account", null, new { @class = "btn btn-primary btn-lg" })
+        &nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("Sign in >>", "Login", "Account", null, new { @class = "btn btn-primary btn-lg" })
+        @*&nbsp;&nbsp;&nbsp;
+        <img src="~/images/healthy eating quote.png" width="200" height="110" />
+        &nbsp;&nbsp;&nbsp;
+        <img src="~/images/images-1.png" width="200" height="110" />*@
+
+    </p>
+    <h3 style="font-weight:500">Join us and know the Nutrition and Workout plans that we offer.</h3>
 </div>
+}
 <div class="row">
     <div class="col-md-4">
         <h2 style="color:lemonchiffon">Whats Your Body Type <span class="iconify" data-icon="bi-patch-question-fill" data-inline="false"></span></h2>

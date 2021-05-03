@@ -39,3 +39,12 @@ C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\postdeplo
 C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\predeploy.sql
 C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\nimish.vishnoi\source\Project1\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\Model.xml
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\refactor.xml
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\postdeploy.sql
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Newclone\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb

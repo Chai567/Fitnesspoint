@@ -1,16 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="FitnesspointDatabaseModelStoreContainer" CdmEntityContainer="FitnesspointDatabaseEntities">
-    <EntitySetMapping Name="Banks">
-      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Bank">
-        <MappingFragment StoreEntitySet="Bank">
-          <ScalarProperty Name="NId" ColumnName="NId" />
-          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
-          <ScalarProperty Name="Branch" ColumnName="Branch" />
-          <ScalarProperty Name="Balance" ColumnName="Balance" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="DietPlans">
       <EntityTypeMapping TypeName="FitnesspointDatabaseModel.DietPlan">
         <MappingFragment StoreEntitySet="DietPlan">
@@ -50,18 +40,6 @@
           <ScalarProperty Name="Created_At" ColumnName="Created_At" />
           <ScalarProperty Name="Updated_At" ColumnName="Updated_At" />
           <ScalarProperty Name="Price" ColumnName="Price" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Payment_">
-      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment_">
-        <MappingFragment StoreEntitySet="Payment_">
-          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
-          <ScalarProperty Name="Payment1" ColumnName="Payment1" />
-          <ScalarProperty Name="Discount" ColumnName="Discount" />
-          <ScalarProperty Name="NationalId" ColumnName="NationalId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -107,6 +85,17 @@
           <ScalarProperty Name="Created_At" ColumnName="Created_At" />
           <ScalarProperty Name="Updated_At" ColumnName="Updated_At" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTbls">
+      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.PaymentTbl">
+        <MappingFragment StoreEntitySet="PaymentTbl">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Plan_name" ColumnName="Plan_name" />
+          <ScalarProperty Name="Plan_id" ColumnName="Plan_id" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

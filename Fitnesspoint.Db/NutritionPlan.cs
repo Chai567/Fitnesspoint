@@ -17,7 +17,7 @@ namespace Fitnesspoint.Db
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NutritionPlan()
         {
-            this.Payment_ = new HashSet<Payment_>();
+            this.PaymentTbls = new HashSet<PaymentTbl>();
         }
     
         public int NutriPlanId { get; set; }
@@ -28,6 +28,6 @@ namespace Fitnesspoint.Db
         public int Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment_> Payment_ { get; set; }
+        public virtual ICollection<PaymentTbl> PaymentTbls { get; set; }
     }
 }

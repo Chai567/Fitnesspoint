@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "ProceedToPay";
+    int pid = (int)ViewData["Plan_id"];
+    string pname = ViewData["Plan_name"].ToString();
+    int price = (int)ViewData["Amount"];
+
+    long mobile = (long)ViewData["Contact"];
+    int uid = (int)ViewData["User_id"];
+}
+
+<h2 style="color:antiquewhite">Enter your card details</h2>
+
+<dl class="dl-horizontal" style="background-color:beige">
+    <dt style="text-align:center;font-weight:200;font-size:x-large"><b>Plan details</b></dt>
+    <dd></dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+    <dt>
+        Plan Id :
+    </dt>
+    <dd>
+        @Html.ViewData["Plan_id"]
+    </dd>
+    <dt>
+        Plan Name :
+    </dt>
+    <dd>
+        @Html.ViewData["Plan_name"]
+    </dd>
+
+    <dt>
+        Amount :
+    </dt>
+    <dd>
+        @Html.ViewData["Amount"]
+    </dd>
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+
+    <dt>&nbsp;&nbsp;</dt>
+    <dd></dd>
+
+</dl>
+<input type="hidden" name="User_id" value="@uid" />
+<input type="hidden" name="Plan_id" value="@pid" />
+<input type="hidden" name="Plan_name" value="@pname" />
+<input type="hidden" name="Amount" value="@price" />
+<div class="jumbotron" style="background-color:antiquewhite">
+    <form action="FinalPay" method="post" autocomplete="off">
+        <input type="hidden" name="User_id" value="@uid" />
+        <input type="hidden" name="Plan_id" value="@pid" />
+        <input type="hidden" name="Plan_name" value="@pname" />
+        <input type="hidden" name="Amount" value="@price" />
+
+        <p style="text-align:left;font-weight:200;font-size:x-large">Card details</p>
+        <label>Card number:</label>
+        <br>
+        <input type="number" id="fname" required>
+        <br />
+        <br />
+        <label for="lname">Expiry:</label>
+        <br>
+        <input type="date" id="lname" required>
+        <br />
+        <br />
+        <label>CVC number:</label>
+        <br />
+        <input type="number"  id="lname" required >
+        <br />
+        <br />
+
+        <input type="submit" value="Pay >>" class="btn btn-primary lg">
+
+        <br />
+        <br />
+    </form>
+</div>
+
+
+
+
+
+
+

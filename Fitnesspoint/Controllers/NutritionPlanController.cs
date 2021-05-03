@@ -63,8 +63,11 @@ namespace Fitnesspoint.Controllers
         
         // GET: NutritionPlan/listUserAllPlans
         [HttpGet]
-        public ActionResult listUserAllPlans()
+        public ActionResult listUserAllPlans(int User_id, long Contact, string Name)
         {
+            Session["User_id"] = User_id;
+            Session["Contact"] = Contact;
+            Session["Name"] = Name;
             //fetch data from all nutrition plans present in the database 
             var result = impl.findAllNutritionPlan();
             //pass the fetched data to View

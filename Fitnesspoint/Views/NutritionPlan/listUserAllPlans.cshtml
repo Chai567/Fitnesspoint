@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<Fitnesspoint.Models.NutritionPlanModel>
 
 @{
+    ViewBag.Title = "All Nutrition Plans";
     ViewBag.Title = "listUserAllPlans";
+    int id = (int)Session["User_id"];
+    long contact = (long)Session["Contact"];
+    string name = Session["Name"].ToString();
 }
 
-<h2 style="color:antiquewhite;text-align:center">List All Nutrition Plans</h2>
+<h2 style="color:antiquewhite;text-align:center">Nutrition Plans</h2>
 <hr />
 <table class="table jumbotron" style="background-color:antiquewhite">
     <tr>
@@ -36,6 +40,9 @@
             <td>
 
                 @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-success" })
+            </td>
+            <td>
+                @Html.ActionLink("Purchase", "Index","Checkout",new { User_id=id,Plan_id = item.NutriPlanId,Plan_name=item.Name,Amount=item.Price,Contact=contact,Name=name},new {@class="btn btn-primary lg" })
             </td>
         </tr>
     }

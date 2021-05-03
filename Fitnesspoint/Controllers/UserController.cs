@@ -46,7 +46,7 @@ namespace Fitnesspoint.Controllers
                 string A = sdr["AllergicTo"].ToString();
                 string Goal = sdr["Goal"].ToString();
                 string E = sdr["Email"].ToString();
-                string C = sdr["Contact"].ToString();
+                long C = Convert.ToInt64(sdr["Contact"]);
 
                 ViewData["Name"] = N;
                 ViewData["Gender"] = G;
@@ -58,11 +58,13 @@ namespace Fitnesspoint.Controllers
                 ViewData["Email"] = E;
                 ViewData["Goal"] = Goal;
                 ViewData["Contact"] = C;
-                
-                Session["Id"] = Id;
 
-                
-                
+                Session["Id"] = Id;
+                Session["Name"] = N;
+                Session["Contact"] = C;
+
+
+
 
             }
             sqlconn.Close();

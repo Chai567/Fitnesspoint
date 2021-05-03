@@ -27,3 +27,8 @@ C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Debug\F
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.dll
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb
+C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.dll
+C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.pdb
+C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
+C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.dll
+C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb

@@ -5,6 +5,8 @@
     ViewBag.Title = "UserLogin";
     Layout = "~/Views/Shared/_userLayout.cshtml";
     int id = (int)Session["Id"];
+    long contact = (long)Session["Contact"];
+    string name = Session["Name"].ToString();
 }
 
 
@@ -104,14 +106,14 @@
 
 
         </dl>
-        @Html.ActionLink("Edit", "Edit", "User",new { id=Session["Id"]} ,new { @class = "btn btn-primary btn-lg" })
-
+        @Html.ActionLink("Edit", "Edit", "User", new { id = Session["Id"] }, new { @class = "btn btn-primary btn-lg" })
+        
     </div>
     <hr />
 
-    
+
     <div class="jumbotron" style="background-color:ghostwhite">
-        @Html.ActionLink("View Nutrition Plans >>", "listUserAllPlans", "NutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("View Nutrition Plans >>", "listUserAllPlans", "NutritionPlan", new { User_id = id, Contact = contact, Name = name }, new { @class = "btn btn-primary btn-lg" })
         &nbsp;&nbsp;
         @Html.ActionLink("View Diet Plans >>", "listUserDietPlan", "DietPlan", new { User_id = id }, new { @class = "btn btn-primary btn-lg" })
         <br />
@@ -119,8 +121,10 @@
         @Html.ActionLink("View Workout Plan >>", "Exercise", "Exercise", null, new { @class = "btn btn-primary btn-lg" })
         &nbsp;&nbsp;&nbsp;&nbsp;
         @Html.ActionLink("View Weight Log >>", "showUserWeightLog", "WeightLog", new { user_id = id }, new { @class = "btn btn-primary btn-lg" })
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("View My Items >>", "Myitems", "Checkout", new { User_id = id }, new { @class = "btn btn-primary btn-lg" })
 
     </div>
 
-}
 
+}

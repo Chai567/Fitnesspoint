@@ -42,6 +42,23 @@ namespace Fitnesspoint.Db.DbOperations
 
 
         }
+
+
+        public bool UsernameExits(UserModel model)
+        {
+            bool uniqueUser = true;
+            using (var context = new FitnesspointDatabaseEntities())
+            {
+                UserDetail User = new UserDetail();
+                if (context.UserDetails.Any(u => u.Username == model.Username))
+                {
+                    uniqueUser = false;
+                }
+
+            }
+
+            return uniqueUser;
+        }
     }
 }
 

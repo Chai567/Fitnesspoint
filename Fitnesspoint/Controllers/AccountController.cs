@@ -51,17 +51,27 @@ namespace Fitnesspoint.Controllers
         public ActionResult Register(UserModel model)
         {
             model.Role = "User";
-
+            bool checkUsername = Repository.UsernameExits(model);
             if (ModelState.IsValid)
             {
-                int id = Repository.AddUser(model);
-                ViewBag.Message = "You are registered";
-                if (id > 0)
-                {
-                    ModelState.Clear();
 
+                if (checkUsername)
+                {
+                    int id = Repository.AddUser(model);
+                    ViewBag.Message = "You are registered";
+                    if (id > 0)
+                    {
+                        ModelState.Clear();
+
+                    }
+                    return RedirectToAction("Login", "Account");
                 }
-                return RedirectToAction("Login", "Account");
+                else
+                {
+                    Session["check"] = checkUsername;
+                    ViewBag.Error = "Username is already taken";
+                    //ModelState.AddModelError("", "Username is already taken");
+                }
             }
             var List = new List<string>()
             {

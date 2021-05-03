@@ -19,8 +19,8 @@ namespace Fitnesspoint.Db
         {
             this.DietPlans = new HashSet<DietPlan>();
             this.ExerciseDetails = new HashSet<ExerciseDetail>();
-            this.Payment_ = new HashSet<Payment_>();
             this.WeightLogs = new HashSet<WeightLog>();
+            this.PaymentTbls = new HashSet<PaymentTbl>();
         }
     
         public int UserId { get; set; }
@@ -44,8 +44,8 @@ namespace Fitnesspoint.Db
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExerciseDetail> ExerciseDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment_> Payment_ { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WeightLog> WeightLogs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PaymentTbl> PaymentTbls { get; set; }
     }
 }
