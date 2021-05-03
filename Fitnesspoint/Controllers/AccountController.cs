@@ -111,7 +111,7 @@ namespace Fitnesspoint.Controllers
                 {
                     
                     Session["Username"] = model.Username.ToString();
-                    ViewBag.Message = "User";
+                   
                     FormsAuthentication.SetAuthCookie(model.Username.ToString(), false);
                     
                     return RedirectToAction("Welcome", "User");
@@ -120,8 +120,7 @@ namespace Fitnesspoint.Controllers
                 {
                     if (valid)
                     {
-                      
-                        
+
                         FormsAuthentication.SetAuthCookie(model.Username, false);
                         
                         return (RedirectToAction("Adminview", "Admin"));

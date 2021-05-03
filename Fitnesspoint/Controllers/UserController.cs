@@ -24,6 +24,8 @@ namespace Fitnesspoint.Controllers
         [Authorize]
         public ActionResult Welcome()
         {
+            bool user = Convert.ToBoolean(TempData["User"]);
+            Session["User"] = user;
             string displaying = (string)Session["Username"];
             string conn = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(conn);

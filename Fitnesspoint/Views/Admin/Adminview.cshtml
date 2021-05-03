@@ -20,14 +20,17 @@
     @Html.ActionLink("View all Nutrition Plans >>", "listAllPlans", "NutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
     &nbsp;&nbsp;&nbsp;
     @Html.ActionLink("Create a Nutrition Plan >>", "createNutritionPlan", "NutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
+    &nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("View all Diet Plans >>", "listAllDietPlans", "DietPlan", null, new { @class = "btn btn-primary btn-lg" })
+    &nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("Create a Diet Plan >>", "createDietPlan", "DietPlan",null, new { @class = "btn btn-primary btn-lg" })
 
 </div>
 
 <div class="jumbotron" style="background-color:antiquewhite">
     <h2 style="font-weight:900">Weight Log Management</h2>
     <br />
-    @Html.ActionLink("View all Nutrition Plans >>", "listAllPlans", "NutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
-    &nbsp;&nbsp;&nbsp;
+    
     @Html.ActionLink("View all Weight Logs>>", "showAllWeightLog", "WeightLog", null, new { @class = "btn btn-primary btn-lg" })
 
 </div>

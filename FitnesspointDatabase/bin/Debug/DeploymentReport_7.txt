@@ -1,0 +1,25 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[DietPlan] (Table)
+       [dbo].[ExerciseDetail] (Table)
+       [dbo].[NutritionPlan] (Table)
+       [dbo].[PaymentTbl] (Table)
+       [dbo].[UserDetails] (Table)
+       [dbo].[WeightLog] (Table)
+       [dbo].[FK_DietPlan_User] (Foreign Key)
+       Foreign Key: <unnamed> (Foreign Key)
+       [dbo].[FK_PaymentTbl_NutritionPlan] (Foreign Key)
+       [dbo].[FK_PaymentTbl_UserDetails] (Foreign Key)
+       Foreign Key: <unnamed> (Foreign Key)
+
+** Supporting actions

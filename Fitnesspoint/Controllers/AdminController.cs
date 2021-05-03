@@ -18,6 +18,7 @@ namespace Fitnesspoint.Controllers
         //First Page visible after Valid Admin Login
         public ActionResult Adminview()
         {
+            
             return View();
         }
         

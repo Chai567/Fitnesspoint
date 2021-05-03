@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="FitnesspointDatabase.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\CHAITANYA.SHAH\DESKTOP\FITNESSPOINTDATABASE\OBJ\DEBUG\FITNESSPOINTDATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\ROHIT.PATIDAR\SOURCE\ROHIT\FITNESSPOINTDATABASE\OBJ\DEBUG\FITNESSPOINTDATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="FitnesspointDatabase" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -508,7 +508,7 @@
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="50" />
+									<Property Name="IsMax" Value="True" />
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[varchar]" />
@@ -525,7 +525,7 @@
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="50" />
+									<Property Name="IsMax" Value="True" />
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[varchar]" />

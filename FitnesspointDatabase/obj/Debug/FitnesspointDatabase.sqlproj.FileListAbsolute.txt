@@ -52,3 +52,13 @@ C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\Model.xml
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\refactor.xml
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\postdeploy.sql
 C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\Model.xml
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\refactor.xml
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\postdeploy.sql
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Rohit\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
