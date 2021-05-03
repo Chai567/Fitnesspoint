@@ -62,10 +62,8 @@
     <Build Include="NutritionPlan.sql" />
     <Build Include="WeightLog.sql" />
     <Build Include="ExerciseDetail.sql" />
-    <Build Include="Payment.sql" />
-    <Build Include="Payment_cred.sql" />
-    <Build Include="Bank.sql" />
     <Build Include="DietPlan.sql" />
+    <Build Include="PaymentTbl.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Fitnesspoint.PostDeployment.sql" />
