@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[NutritionPlan](
 	[NutriPlanId] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [varchar](50) NOT NULL,
-	[PlanDescription] [varchar](50) NOT NULL,
+	[Name] [varchar](max) NOT NULL,
+	[PlanDescription] [varchar](max) NOT NULL,
 	[Created_At] [datetime] NOT NULL,
 	[Updated_At] [datetime] NOT NULL,
 	[Price] [int] NOT NULL,

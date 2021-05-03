@@ -15,8 +15,8 @@ namespace Fitnesspoint.Db
     public partial class PaymentTbl
     {
         public int Order_id { get; set; }
-        public int? User_id { get; set; }
-        public int? Plan_id { get; set; }
+        public Nullable<int> User_id { get; set; }
+        public Nullable<int> Plan_id { get; set; }
         public string Plan_name { get; set; }
         public int Amount { get; set; }
     

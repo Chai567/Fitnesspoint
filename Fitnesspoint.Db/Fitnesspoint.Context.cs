@@ -28,7 +28,6 @@ namespace Fitnesspoint.Db
         public virtual DbSet<DietPlan> DietPlans { get; set; }
         public virtual DbSet<ExerciseDetail> ExerciseDetails { get; set; }
         public virtual DbSet<NutritionPlan> NutritionPlans { get; set; }
-        
         public virtual DbSet<UserDetail> UserDetails { get; set; }
         public virtual DbSet<WeightLog> WeightLogs { get; set; }
         public virtual DbSet<PaymentTbl> PaymentTbls { get; set; }

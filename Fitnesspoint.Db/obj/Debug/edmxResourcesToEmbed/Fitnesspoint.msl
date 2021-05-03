@@ -43,19 +43,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Payment_cred">
-      <EntityTypeMapping TypeName="FitnesspointDatabaseModel.Payment_cred">
-        <MappingFragment StoreEntitySet="Payment_cred">
-          <ScalarProperty Name="DebitCardNo" ColumnName="DebitCardNo" />
-          <ScalarProperty Name="Balance" ColumnName="Balance" />
-          <ScalarProperty Name="Expiry_Month" ColumnName="Expiry_Month" />
-          <ScalarProperty Name="Expiry_Year" ColumnName="Expiry_Year" />
-          <ScalarProperty Name="cvv" ColumnName="cvv" />
-          <ScalarProperty Name="Nid" ColumnName="Nid" />
-          <ScalarProperty Name="AtmPin" ColumnName="AtmPin" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="UserDetails">
       <EntityTypeMapping TypeName="FitnesspointDatabaseModel.UserDetail">
         <MappingFragment StoreEntitySet="UserDetails">

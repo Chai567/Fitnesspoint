@@ -8,12 +8,10 @@
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.DietPlan" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.ExerciseDetail" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.NutritionPlan" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FitnesspointDatabaseModel.Payment_cred" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.UserDetail" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.WeightLog" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
         <AssociationConnector Association="FitnesspointDatabaseModel.FK_DietPlan_User" ManuallyRouted="false" />
         <AssociationConnector Association="FitnesspointDatabaseModel.FK__ExerciseD__UserI__34C8D9D1" ManuallyRouted="false" />
-        <AssociationConnector Association="FitnesspointDatabaseModel.FK_Payment_cred_Payment_cred" ManuallyRouted="false" />
         <AssociationConnector Association="FitnesspointDatabaseModel.FK__WeightLog__UserI__38996AB5" ManuallyRouted="false" />
         <EntityTypeShape EntityType="FitnesspointDatabaseModel.PaymentTbl" Width="1.5" PointX="9" PointY="4.875" />
         <AssociationConnector Association="FitnesspointDatabaseModel.FK_PaymentTbl_NutritionPlan" />
