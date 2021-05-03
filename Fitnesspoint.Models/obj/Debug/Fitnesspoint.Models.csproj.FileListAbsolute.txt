@@ -34,7 +34,6 @@ C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\obj\Debug\Fitnesspoin
 C:\Users\rohit.patidar\source\Newclone\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb
 C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.dll
 C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\bin\Debug\Fitnesspoint.Models.pdb
-C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csprojAssemblyReference.cache
 C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
 C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.dll
 C:\Users\rohit.patidar\source\Rohit\Fitnesspoint.Models\obj\Debug\Fitnesspoint.Models.pdb
