@@ -13,7 +13,11 @@ namespace Fitnesspoint.Controllers
     public class CheckoutController : Controller
     {
         private FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
-        // GET: Checkout
+        
+        
+        
+        //Opens a page after user has selected a plan to purchase to display user details and plan details
+        //for confirmation purpose that user is actually puchasing what he is willing to
         [Authorize]
         public ActionResult Index(int User_id, int Plan_id, string Plan_name, int Amount, long Contact, string Name)
         {
@@ -27,6 +31,10 @@ namespace Fitnesspoint.Controllers
             return View();
         }
 
+        
+        
+        //This will take you to the page where you can fill in your card details.
+        //Also it will show you plan details once again so that you are buying the right item.
         [Authorize]
         public ActionResult ProceedToPay(int User_id, int Plan_id, string Plan_name, int Amount, long Contact)
         {
@@ -41,6 +49,11 @@ namespace Fitnesspoint.Controllers
             return View();
         }
 
+
+
+        //This method actually should redirect the user to the bank side.
+        //Bank side then can verify the details of card and check the balance and all.
+        
         [Authorize]
         [HttpPost]
         public ActionResult FinalPay()
@@ -58,6 +71,9 @@ namespace Fitnesspoint.Controllers
  
         }
 
+
+        //If all goes well then required amount will be deducted from your account.
+        //And required entries will be done in the payment related table.
         [Authorize]
         public ActionResult Paid()
         {

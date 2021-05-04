@@ -16,9 +16,9 @@
         @Html.ValidationSummary(true, "", new { @style="color:antiquewhite;font-size:large"})
         <br />
         <div class="form-group">
-            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger"})
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
                 @Html.ValidationMessageFor(model => model.Username, "", new { @style = "color:antiquewhite" })
             </div>
         </div>

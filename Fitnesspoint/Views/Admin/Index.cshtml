@@ -20,9 +20,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Gender)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
@@ -59,9 +57,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Gender)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DOB)
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.Weight)
             </td>
@@ -83,9 +79,9 @@
             </td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.UserId })
-                @Html.ActionLink("Details", "Details", new { id = item.UserId })
-                @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserId }, new { @class = "btn btn-primary lg btn-warning" })
+                @Html.ActionLink("Details", "Details", new { id = item.UserId }, new { @class = "btn btn-primary lg btn-success" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserId }, new { @class = "btn btn-primary lg btn-danger" })
             </td>
         </tr>
     }

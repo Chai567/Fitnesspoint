@@ -20,7 +20,9 @@ namespace Fitnesspoint.Controllers
         WeightLogDAOImpl x=new WeightLogDAOImpl();
         
         
-        //User Welcome Page with All Details of Logged in user
+        //User Welcome Page with All Details of Logged in user.
+        //Different links to content of the website.
+        
         [Authorize]
         public ActionResult Welcome()
         {
@@ -30,6 +32,7 @@ namespace Fitnesspoint.Controllers
             string conn = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(conn);
             string query = @"select UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Contact,Goal from [dbo].[UserDetails] where Username='" + displaying + "'";
+            
             sqlconn.Open();
 
             SqlCommand sqlcomm = new SqlCommand(query, sqlconn);
@@ -69,13 +72,15 @@ namespace Fitnesspoint.Controllers
 
 
             }
+            
+            
             sqlconn.Close();
 
             return View();
         }
 
 
-        // GET: Admin/Edit/5
+        // Method to edit the user information.
         public ActionResult Edit(int? id)
         {
             if (id == null)

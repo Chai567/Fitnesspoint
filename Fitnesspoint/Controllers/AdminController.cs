@@ -16,19 +16,21 @@ namespace Fitnesspoint.Controllers
         private FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
 
         //First Page visible after Valid Admin Login
+        //Contains links to various activites that admin can perform.
         public ActionResult Adminview()
         {
             
             return View();
         }
         
-        // GET: Admin
+        //This page displays the details of all the users of application.
+        //By clicking on User Management link in AdminView you will be redirected to this ActionResult.
         public ActionResult Index()
         {
             return View(db.UserDetails.ToList());
         }
 
-        // GET: Admin/Details/5
+        //This allows the admin to see the details of a particular user.
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,15 +45,14 @@ namespace Fitnesspoint.Controllers
             return View(userDetail);
         }
 
-        // GET: Admin/Create
+        //This allows the admin to add a user into the system.
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Create
-        
-        
+        //This is the post method for create.
+        //when all the information is as per validations.Entries will be done in the table.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Username,Password,Role,Diet_Plan_id,Goal,Contact")] UserDetail userDetail)
@@ -66,7 +67,8 @@ namespace Fitnesspoint.Controllers
             return View(userDetail);
         }
 
-        // GET: Admin/Edit/5
+        //This allows the admin to edit the details of a particular user.
+        //Just in case it is required.
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,8 +83,9 @@ namespace Fitnesspoint.Controllers
             return View(userDetail);
         }
 
-        // POST: Admin/Edit/5
-      
+        //This is the post method for edit.
+        //If changes are done as per the validations then save is hit.
+        //And the changes are updated in the table.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Username,Password,Role,Diet_Plan_id,Goal,Contact")] UserDetail userDetail)
@@ -96,7 +99,10 @@ namespace Fitnesspoint.Controllers
             return View(userDetail);
         }
 
-        // GET: Admin/Delete/5
+        //This a get method for delete.
+        //This method is to allow Admin to delete a user.
+        //The details of the selected user will be displayed.
+        //A button to delete will be given.
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,7 +117,9 @@ namespace Fitnesspoint.Controllers
             return View(userDetail);
         }
 
-        // POST: Admin/Delete/5
+        //This is a post method for delete.
+        //All the entries of the selected user will be deleted from the table
+        //if Admin confirms the delete process.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -122,6 +130,7 @@ namespace Fitnesspoint.Controllers
             return RedirectToAction("Index");
         }
 
+        //This method performs all the object cleanup.
         protected override void Dispose(bool disposing)
         {
             if (disposing)
