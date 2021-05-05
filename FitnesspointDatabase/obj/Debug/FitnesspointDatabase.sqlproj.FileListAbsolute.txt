@@ -70,3 +70,9 @@ C:\Users\rohit.patidar\source\Fitnesspoint\FitnesspointDatabase\obj\Debug\postde
 C:\Users\rohit.patidar\source\Fitnesspoint\FitnesspointDatabase\obj\Debug\predeploy.sql
 C:\Users\rohit.patidar\source\Fitnesspoint\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\rohit.patidar\source\Fitnesspoint\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\nimish.vishnoi\source\Nimish\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
