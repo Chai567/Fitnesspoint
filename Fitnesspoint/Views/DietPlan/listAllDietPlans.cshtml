@@ -54,10 +54,10 @@
                 @Html.DisplayFor(modelItem => item.UserId)
             </td>
             <td>
-                @Html.ActionLink("Edit", "changeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
-                @Html.ActionLink("Calorie Details", "showCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
-                @Html.ActionLink("Diet Details", "listDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-success" })
-                @Html.ActionLink("Delete", "removeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-danger" })
+                @Html.ActionLink("Edit", "ChangeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
+                @Html.ActionLink("Calorie Details", "ShowCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
+                @Html.ActionLink("Diet Details", "ListDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-success" })
+                @Html.ActionLink("Delete", "RemoveDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-danger" })
 
             </td>
         </tr>

@@ -9,7 +9,7 @@ namespace Fitnesspoint.Db.DbOperations
     public class NutritionPlanDAOImpl
     {
         //savePlan() saves NutritionPlan in the database
-        public NutritionPlan savePlan(NutritionPlanModel nutritionPlan)
+        public NutritionPlan SavePlan(NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -37,7 +37,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //findAllNutritionPlan() returns the list of NutritionPlanModel Objects
-        public List<NutritionPlanModel> findAllNutritionPlan()
+        public List<NutritionPlanModel> FindAllNutritionPlan()
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -63,7 +63,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //findNutritionPlan() returns the NutritionPlans based on NutriPlanId
-        public NutritionPlanModel findNutritionPlan(int plan_id)
+        public NutritionPlanModel FindNutritionPlan(int plan_id)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -92,7 +92,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //updateNutritionPlan() update the NutritionPlans based on NutriPlanId and NutritionPlanModel
-        public bool updateNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
+        public bool UpdateNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -116,7 +116,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //deleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
-        public bool deleteNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
+        public bool DeleteNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())

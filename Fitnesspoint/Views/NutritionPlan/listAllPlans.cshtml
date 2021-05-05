@@ -6,7 +6,7 @@
 
 <h2 style="color:antiquewhite;text-align:center">All Nutrition Plans</h2>
 <p>
-    @Html.ActionLink("Create New Plan", "createNutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("Create New Plan", "CreateNutritionPlan", null, new { @class = "btn btn-primary btn-lg" })
 </p>
 
 <br />
@@ -58,9 +58,9 @@
                 @Html.DisplayFor(modelItem => item.Updated_At)
             </td>
             <td>
-                @Html.ActionLink("Edit", "changePlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-warning" })
-                @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-success" })
-                @Html.ActionLink("Delete", "removePlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-danger" })
+                @Html.ActionLink("Edit", "ChangePlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-warning" })
+                @Html.ActionLink("Details", "ListPlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-success" })
+                @Html.ActionLink("Delete", "RemovePlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-danger" })
             </td>
         </tr>
     }

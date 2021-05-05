@@ -113,14 +113,14 @@
 
 
     <div class="jumbotron" style="background-color:ghostwhite">
-        @Html.ActionLink("View Nutrition Plans >>", "listUserAllPlans", "NutritionPlan", new { User_id = id, Contact = contact, Name = name }, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("View Nutrition Plans >>", "ListUserAllPlans", "NutritionPlan", new { User_id = id, Contact = contact, Name = name }, new { @class = "btn btn-primary btn-lg" })
         &nbsp;&nbsp;
-        @Html.ActionLink("View Diet Plans >>", "listUserDietPlan", "DietPlan", new { User_id = id }, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("View Diet Plans >>", "ListUserDietPlan", "DietPlan", new { User_id = id }, new { @class = "btn btn-primary btn-lg" })
         <br />
         <br />
         @Html.ActionLink("View Workout Plan >>", "Exercise", "Exercise", null, new { @class = "btn btn-primary btn-lg" })
         &nbsp;&nbsp;&nbsp;&nbsp;
-        @Html.ActionLink("View Weight Log >>", "showUserWeightLog", "WeightLog", new { user_id = id }, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("View Weight Log >>", "ShowUserWeightLog", "WeightLog", new { user_id = id }, new { @class = "btn btn-primary btn-lg" })
         &nbsp;&nbsp;&nbsp;&nbsp;
        
     </div>

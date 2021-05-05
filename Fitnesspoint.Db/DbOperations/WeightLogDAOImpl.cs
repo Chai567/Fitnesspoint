@@ -9,7 +9,7 @@ namespace Fitnesspoint.Db.DbOperations
     public class WeightLogDAOImpl
     {
         //saveWeight() saves WeightLog in the database
-        public WeightLog saveWeight(WeightLogModel weight)
+        public WeightLog SaveWeight(WeightLogModel weight)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -34,7 +34,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //findAllWeight() returns the list of WeightLogModel Objects
-        public List<WeightLogModel> findAllWeight()
+        public List<WeightLogModel> FindAllWeight()
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -58,7 +58,7 @@ namespace Fitnesspoint.Db.DbOperations
 
 
         //findWeight() returns the WeightLog based on WeightId
-        public WeightLogModel findWeight(int weight_id)
+        public WeightLogModel FindWeight(int weight_id)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -89,7 +89,7 @@ namespace Fitnesspoint.Db.DbOperations
 
         //USER Weight Log
         //findUserWeight() returns the list of all WeightLog based on UserId
-        public List<WeightLogModel> findUserWeight(int user_id)
+        public List<WeightLogModel> FindUserWeight(int user_id)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -124,7 +124,7 @@ namespace Fitnesspoint.Db.DbOperations
 
 
         //updateWeight() update the WeightLogs based on WeightId and WeightLogModel
-        public bool updateWeight(int weight_id, WeightLogModel weight)
+        public bool UpdateWeight(int weight_id, WeightLogModel weight)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
@@ -147,7 +147,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //deleteWeight() deletes the WeightLogs based on WeightId and WeightLogModel
-        public bool deleteWeight(int weight_id, WeightLogModel weight)
+        public bool DeleteWeight(int weight_id, WeightLogModel weight)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())

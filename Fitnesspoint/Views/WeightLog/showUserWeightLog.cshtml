@@ -7,7 +7,7 @@
 <h2 style="color:antiquewhite; text-align:center"><b>User WeightLog</b></h2>
 
 <p>
-    @Html.ActionLink("Add Weight", "addWeightLog", null, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("Add Weight", "AddWeightLog", null, new { @class = "btn btn-primary btn-lg" })
 </p>
 
 <hr />
@@ -41,9 +41,9 @@
         @Html.DisplayFor(modelItem => item.UserId)
     </td>
     <td>
-        @Html.ActionLink("Edit", "updateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
-        @Html.ActionLink("Details", "showWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
-        @Html.ActionLink("Delete", "removeWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
+        @Html.ActionLink("Edit", "UpdateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
+        @Html.ActionLink("Details", "ShowWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-success" })
+        @Html.ActionLink("Delete", "RemoveWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger" })
     </td>
 </tr>
     }

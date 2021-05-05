@@ -39,7 +39,7 @@
             </td>
             <td>
 
-                @Html.ActionLink("Details", "listPlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-success" })
+                @Html.ActionLink("Details", "ListPlan", new { plan_id = item.NutriPlanId }, new { @class = "btn btn-primary lg btn-success" })
             </td>
             <td>
                 @Html.ActionLink("Purchase", "Index","Checkout",new { User_id=id,Plan_id = item.NutriPlanId,Plan_name=item.Name,Amount=item.Price,Contact=contact,Name=name},new {@class="btn btn-primary lg" })

@@ -10,7 +10,7 @@ namespace Fitnesspoint.Controllers
 {
     public class NutritionPlanController : Controller
     {
-        NutritionPlanDAOImpl impl = null;
+        readonly NutritionPlanDAOImpl impl = null;
         
         
         //CONSTRUCTOR
@@ -21,7 +21,7 @@ namespace Fitnesspoint.Controllers
 
         
         // GET: NutritionPlan/createNutritionPlan
-        public ActionResult createNutritionPlan()
+        public ActionResult CreateNutritionPlan()
         {
             return View();
         }
@@ -29,13 +29,13 @@ namespace Fitnesspoint.Controllers
 
         // POST: NutritionPlan/createNutritionPlan
         [HttpPost]
-        public ActionResult createNutritionPlan(NutritionPlanModel nutritionPlan)
+        public ActionResult CreateNutritionPlan(NutritionPlanModel nutritionPlan)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
                 //save data in the database 
-                impl.savePlan(nutritionPlan);
+                impl.SavePlan(nutritionPlan);
                 //shows message to user if data is inserted
                 ViewBag.Message = "Nutrition Plan Inserted successfully";
                 //deletes the data from model
@@ -51,10 +51,10 @@ namespace Fitnesspoint.Controllers
         
         // GET: NutritionPlan/listAllPlans
         [HttpGet]
-        public ActionResult listAllPlans()
+        public ActionResult ListAllPlans()
         {
             //fetch data from all nutrition plans present in the database 
-            var result = impl.findAllNutritionPlan();
+            var result = impl.FindAllNutritionPlan();
             //pass the fetched data to View
             return View(result);
         }
@@ -63,32 +63,32 @@ namespace Fitnesspoint.Controllers
         
         // GET: NutritionPlan/listUserAllPlans
         [HttpGet]
-        public ActionResult listUserAllPlans(int User_id, long Contact, string Name)
+        public ActionResult ListUserAllPlans(int User_id, long Contact, string Name)
         {
             Session["User_id"] = User_id;
             Session["Contact"] = Contact;
             Session["Name"] = Name;
             //fetch data from all nutrition plans present in the database 
-            var result = impl.findAllNutritionPlan();
+            var result = impl.FindAllNutritionPlan();
             //pass the fetched data to View
             return View(result);
         }
 
         //GET: NutritionPlan/listPlan/plan_id
-        public ActionResult listPlan(int plan_id)
+        public ActionResult ListPlan(int plan_id)
         {
             //fetch data from nutrition plan having NutriPlanId equals to plan_id present in the database 
-            var nutritionplan = impl.findNutritionPlan(plan_id);
+            var nutritionplan = impl.FindNutritionPlan(plan_id);
             //pass the fetched data to View
             return View(nutritionplan);
 
         }
 
         // GET: NutritionPlan/changePlan/plan_id
-        public ActionResult changePlan(int plan_id)
+        public ActionResult ChangePlan(int plan_id)
         {
             //fetch data from nutrition plan having NutriPlanId equals to plan_id present in the database 
-            var nutritionplan = impl.findNutritionPlan(plan_id);
+            var nutritionplan = impl.FindNutritionPlan(plan_id);
             //pass the fetched data to View
             return View(nutritionplan);
 
@@ -96,13 +96,13 @@ namespace Fitnesspoint.Controllers
 
         // POST: NutritionPlan/changePlan/plan_id
         [HttpPost]
-        public ActionResult changePlan(NutritionPlanModel nutritionPlan)
+        public ActionResult ChangePlan(NutritionPlanModel nutritionPlan)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
                 //update data in the database based on NutriPlanId 
-                impl.updateNutritionPlan(nutritionPlan.NutriPlanId, nutritionPlan);
+                impl.UpdateNutritionPlan(nutritionPlan.NutriPlanId, nutritionPlan);
                 //redirect to NutritionPlan/listAllPlans
                 return RedirectToAction("listAllPlans");
 
@@ -112,10 +112,10 @@ namespace Fitnesspoint.Controllers
         }
 
         // GET: NutritionPlan/removePlan/plan_id
-        public ActionResult removePlan(int plan_id)
+        public ActionResult RemovePlan(int plan_id)
         {
             //fetch data from nutrition plan having NutriPlanId equals to plan_id present in the database 
-            var nutritionplan = impl.findNutritionPlan(plan_id);
+            var nutritionplan = impl.FindNutritionPlan(plan_id);
             //pass the fetched data to View
             return View(nutritionplan);
 
@@ -123,13 +123,13 @@ namespace Fitnesspoint.Controllers
 
         // POST: NutritionPlan/removePlan/plan_id
         [HttpPost]
-        public ActionResult removePlan(NutritionPlanModel nutritionPlan)
+        public ActionResult RemovePlan(NutritionPlanModel nutritionPlan)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
                 //delete data in the database based on NutriPlanId 
-                impl.deleteNutritionPlan(nutritionPlan.NutriPlanId, nutritionPlan);
+                impl.DeleteNutritionPlan(nutritionPlan.NutriPlanId, nutritionPlan);
                 //redirect to NutritionPlan/listAllPlans
                 return RedirectToAction("listAllPlans");
             }
