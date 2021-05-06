@@ -1,4 +1,22 @@
 ﻿@using System.Data
+@{ 
+    if (User.Identity.IsAuthenticated)
+    {
+        string role = Session["Role"].ToString();
+        if (role == "Admin")
+        {
+            Layout = "~/Views/Shared/_adminLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_userLayout.cshtml";
+        }
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
 <div class="jumbotron" style="background-color:white">
     <p align="right">
         <i class="fa" style="font-size:25px">&#xf07a;</i>

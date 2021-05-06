@@ -53,27 +53,6 @@
                     &nbsp;
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { @style = "color:antiquewhite" }, new { @class = "navbar-brand", @style = "color:antiquewhite" })</li>
                 </ul>
-
-                <ul class="nav navbar-nav navbar-rohit" style="text-align:right">
-
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        
-                            <li class="navbar-brand" style="color:darkseagreen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome,@User.Identity.Name !!</b>&nbsp;&nbsp;&nbsp;</li>
-                        
-                            <li>@Html.ActionLink("My Profile", "WelcomeUSer", "User", null, new { @class = "navbar-brand", @style = "color:yellowgreen;font-weight:bold" })&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                            <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "navbar-brand", @style = "color:darksalmon;font-weight:bold" })</li>
-                        
-                           
-
-                        
-                     }
-
-
-
-
-
-                </ul>
             </div>
         </div>
     </div>

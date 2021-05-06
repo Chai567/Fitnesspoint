@@ -1,5 +1,21 @@
 ﻿@{
     ViewBag.Title = "About";
+    if (User.Identity.IsAuthenticated)
+    {
+        string role = Session["Role"].ToString();
+        if (role == "Admin")
+        {
+            Layout = "~/Views/Shared/_adminLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_userLayout.cshtml";
+        }
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 }
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <br />

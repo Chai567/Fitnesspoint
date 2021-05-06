@@ -217,7 +217,6 @@
     <Content Include="Views\DietPlan\listUserDietPlan.cshtml" />
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Checkout\ProceedToPay.cshtml" />
-    <Content Include="Views\Checkout\FinalPay.cshtml" />
     <Content Include="Views\Checkout\Paid.cshtml" />
     <Content Include="Views\User\WelcomeUser.cshtml" />
   </ItemGroup>

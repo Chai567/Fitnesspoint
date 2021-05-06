@@ -2,7 +2,22 @@
 
 @{
     ViewBag.Title = "addWeightLog";
-
+    if (User.Identity.IsAuthenticated)
+    {
+        string role = Session["Role"].ToString();
+        if (role == "Admin")
+        {
+            Layout = "~/Views/Shared/_adminLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_userLayout.cshtml";
+        }
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 }
 
 <h2 style="color:antiquewhite;text-align:center">Add Weight</h2>
