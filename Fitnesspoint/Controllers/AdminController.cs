@@ -13,7 +13,7 @@ namespace Fitnesspoint.Controllers
     [Authorize]
     public class AdminController : Controller
     {
-        private FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
+        private readonly FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
 
         //First Page visible after Valid Admin Login
         //Contains links to various activites that admin can perform.
@@ -42,28 +42,6 @@ namespace Fitnesspoint.Controllers
             {
                 return HttpNotFound();
             }
-            return View(userDetail);
-        }
-
-        //This allows the admin to add a user into the system.
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //This is the post method for create.
-        //when all the information is as per validations.Entries will be done in the table.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Username,Password,Role,Diet_Plan_id,Goal,Contact")] UserDetail userDetail)
-        {
-            if (ModelState.IsValid)
-            {
-                db.UserDetails.Add(userDetail);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
             return View(userDetail);
         }
 

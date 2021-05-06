@@ -12,8 +12,6 @@ namespace Fitnesspoint.Controllers
 {
     public class CheckoutController : Controller
     {
-        private FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
-        
         
         
         //Opens a page after user has selected a plan to purchase to display user details and plan details

@@ -43,7 +43,7 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
-
+        //To check if username already exists.
         public bool UsernameExits(UserModel model)
         {
             bool uniqueUser = true;
@@ -58,6 +58,30 @@ namespace Fitnesspoint.Db.DbOperations
             }
 
             return uniqueUser;
+        }
+
+        //To get the details of logged in user.
+        public UserModel GetUser(string username)
+        {
+            using (var context = new FitnesspointDatabaseEntities())
+            {
+                var result = context.UserDetails.Where(x => x.Username == username)
+                                              .Select(x => new UserModel()
+                                              {
+                                                  UserId = x.UserId,
+                                                  Name = x.Name,
+                                                  Gender = x.Gender,
+                                                  Weight = x.Weight,
+                                                  Height = x.Height,
+                                                  MedicalCondition = x.MedicalCondition,
+                                                  AllergicTo = x.AllergicTo,
+                                                  Goal = x.Goal,
+                                                  Email = x.Email,
+                                                  Contact = (long)x.Contact
+                                              }).FirstOrDefault();
+
+                return result;
+            }
         }
     }
 }

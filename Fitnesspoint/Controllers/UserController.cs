@@ -16,99 +16,20 @@ namespace Fitnesspoint.Controllers
     public class UserController : Controller
     {
 
-        private FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
-        WeightLogDAOImpl x=new WeightLogDAOImpl();
-        
-        
         //User Welcome Page with All Details of Logged in user.
         //Different links to content of the website.
-        
+
         [Authorize]
-        public ActionResult Welcome()
+        public ActionResult WelcomeUser()
         {
-            bool user = Convert.ToBoolean(TempData["User"]);
-            Session["User"] = user;
-            string displaying = (string)Session["Username"];
-            string conn = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
-            SqlConnection sqlconn = new SqlConnection(conn);
-            string query = @"select UserId,Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Contact,Goal from [dbo].[UserDetails] where Username='" + displaying + "'";
-            
-            sqlconn.Open();
+            string username = Session["Username"].ToString();
+            UserRepository repository = new UserRepository();
 
-            SqlCommand sqlcomm = new SqlCommand(query, sqlconn);
-            sqlcomm.Parameters.AddWithValue("Username", Session["Username"].ToString());
-            SqlDataReader sdr = sqlcomm.ExecuteReader();
-
-            if (sdr.Read())
-            {
-                int Id = Convert.ToInt32(sdr["UserId"]);
-                string N = sdr["Name"].ToString();
-                string G = sdr["Gender"].ToString();
-                string D = sdr["DOB"].ToString();
-                string W = sdr["Weight"].ToString();
-                string H = sdr["Height"].ToString();
-                string M = sdr["MedicalCondition"].ToString();
-                string A = sdr["AllergicTo"].ToString();
-                string Goal = sdr["Goal"].ToString();
-                string E = sdr["Email"].ToString();
-                long C = Convert.ToInt64(sdr["Contact"]);
-
-                ViewData["Name"] = N;
-                ViewData["Gender"] = G;
-                ViewData["DOB"] = D;
-                ViewData["Weight"] = W;
-                ViewData["Height"] = H;
-                ViewData["MedicalCondition"] = M;
-                ViewData["AllergicTo"] = A;
-                ViewData["Email"] = E;
-                ViewData["Goal"] = Goal;
-                ViewData["Contact"] = C;
-
-                Session["Id"] = Id;
-                Session["Name"] = N;
-                Session["Contact"] = C;
-
-
-
-
-            }
-            
-            
-            sqlconn.Close();
-
-            return View();
-        }
-
-
-        // Method to edit the user information.
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserDetail userDetail = db.UserDetails.Find(id);
-            if (userDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userDetail);
-        }
-
-        // POST: Admin/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,Gender,DOB,Weight,Height,MedicalCondition,AllergicTo,Email,Goal")] UserDetail userDetail)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(userDetail).State = EntityState.Modified;
-                var v=db.SaveChanges();
-                return RedirectToAction("Welcome");
-            }
-            return View(userDetail);
+            var user = repository.GetUser(username);
+            Session["Id"] = user.UserId;
+            Session["Name"] = user.Name;
+            Session["Contact"] = user.Contact;
+            return View(user);
         }
     }
 }

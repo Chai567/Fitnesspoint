@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DietPlanModel.cs" />
     <Compile Include="ExerciseDetails.cs" />
+    <Compile Include="MinimumAgeAttribute.cs" />
     <Compile Include="NutritionPlanModel.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

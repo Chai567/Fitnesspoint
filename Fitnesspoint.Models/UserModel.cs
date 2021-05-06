@@ -20,14 +20,17 @@ namespace Fitnesspoint.Models
 
 
         [Required(ErrorMessage = "Enter your Date of birth")]
+        [MinimumAge(16,ErrorMessage ="You must be atleast 16 years old.")]
         public System.DateTime DOB { get; set; }
 
 
         [Required(ErrorMessage = "Enter your Weight")]
+        [Range(50,120,ErrorMessage ="Enter a weight between 50 and 120 kgs")]
         public int Weight { get; set; }
 
 
         [Required(ErrorMessage = "Enter your Height")]
+        [Range(152,219,ErrorMessage ="Enter a height between 152 and 219 cms")]
         public int Height { get; set; }
 
         public string MedicalCondition { get; set; }

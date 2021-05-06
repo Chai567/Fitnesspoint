@@ -17,7 +17,7 @@ namespace Fitnesspoint.Controllers
         
         //Creating a reference variable of UserRepositry type.
         
-        UserRepository Repository = null;
+        readonly UserRepository Repository = null;
 
 
         //This a constructor to initialize the variables.
@@ -124,7 +124,7 @@ namespace Fitnesspoint.Controllers
                    
                     FormsAuthentication.SetAuthCookie(model.Username.ToString(), false);
                     
-                    return RedirectToAction("Welcome", "User");
+                    return RedirectToAction("WelcomeUser", "User");
                 }
                 else
                 {

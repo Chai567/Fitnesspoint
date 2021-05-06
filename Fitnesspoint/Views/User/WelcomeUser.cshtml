@@ -1,0 +1,145 @@
+﻿@model Fitnesspoint.Models.UserModel
+
+@{
+    ViewBag.Title = "WelcomeUser";
+    ViewBag.Title = "UserLogin";
+    Layout = "~/Views/Shared/_userLayout.cshtml";
+    int id = (int)Session["Id"];
+    long contact = (long)Session["Contact"];
+    string name = Session["Name"].ToString();
+}
+
+
+@if (User.Identity.IsAuthenticated)
+
+{
+    <h2 style="color:limegreen;font-weight:500">Welcome,@Session["Name"]</h2>
+    <div class="container">
+        <h4 style="color:antiquewhite"><b>Personal Details</b></h4>
+
+        <dl class="dl-horizontal jumbotron" style="background-color:beige">
+            <dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Weight)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Weight)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Height)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Height)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MedicalCondition)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MedicalCondition)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AllergicTo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AllergicTo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Role)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Role)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Goal)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Goal)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contact)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contact)
+            </dd>
+
+        </dl>
+    </div>
+
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }, new { @class = "btn btn-primary lg", @style = "fonr-size:large" })
+    </p>
+
+    <hr />
+    <div class="jumbotron" style="background-color:ghostwhite">
+        @Html.ActionLink("View Nutrition Plans >>", "ListUserAllPlans", "NutritionPlan", new { User_id = id, Contact = contact, Name = name }, new { @class = "btn btn-primary btn-lg" })
+        &nbsp;&nbsp;
+        @Html.ActionLink("View Diet Plans >>", "ListUserDietPlan", "DietPlan", new { User_id = id }, new { @class = "btn btn-primary btn-lg" })
+        <br />
+        <br />
+        @Html.ActionLink("View Workout Plan >>", "Exercise", "Exercise", null, new { @class = "btn btn-primary btn-lg" })
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("View Weight Log >>", "ShowUserWeightLog", "WeightLog", new { user_id = id }, new { @class = "btn btn-primary btn-lg" })
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+    </div>
+}
