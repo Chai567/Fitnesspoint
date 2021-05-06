@@ -14,7 +14,7 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[DietPlan]  WITH CHECK ADD  CONSTRAINT [FK_DietPlan_User] FOREIGN KEY([UserId])
+ALTER TABLE [dbo].[DietPlan] ADD  CONSTRAINT [FK_DietPlan_User] FOREIGN KEY([UserId])
 REFERENCES [dbo].[UserDetails] ([UserId])
 GO
 

@@ -116,7 +116,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //deleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
-        public bool DeleteNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
+        public bool DeleteNutritionPlan(int plan_id)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())

@@ -10,15 +10,7 @@ namespace Fitnesspoint.Controllers
 {
     public class WeightLogController : Controller
     {
-        readonly WeightLogDAOImpl impl = null;
-
-        //CONSTRUCTOR
-        public WeightLogController()
-        {
-            impl = new WeightLogDAOImpl();
-        }
-
-        
+        readonly WeightLogDAOImpl impl = new WeightLogDAOImpl();
         
         // GET: WeightLog/addWeightLog
         public ActionResult AddWeightLog()
@@ -72,16 +64,6 @@ namespace Fitnesspoint.Controllers
 
         }
 
-        // GET: WeightLog/showWeightLog/weight_id
-        public ActionResult ShowWeightLog(int weight_id)
-        {
-            //fetch data from weight log having WeightId equals to weight_id present in the database 
-            var weightLog = impl.FindWeight(weight_id);
-            //pass the fetched data to View
-            return View(weightLog);
-
-        }
-
         // GET: WeightLog/updateWeightLog/weight_id
         public ActionResult UpdateWeightLog(int weight_id)
         {
@@ -113,27 +95,15 @@ namespace Fitnesspoint.Controllers
         // GET: WeightLog/removeWeightLog/weight_id
         public ActionResult RemoveWeightLog(int weight_id)
         {
-            //fetch data from weight log having WeightId equals to weight_id present in the database 
-            var weightLog = impl.FindWeight(weight_id);
-            //pass the fetched data to View
-            return View(weightLog);
-
-        }
-
-        // POST: WeightLog/removeWeightLog/weight_id
-        [HttpPost]
-        public ActionResult RemoveWeightLog(WeightLogModel weightLog)
-        {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
                 //delete data in the database based on WeightId 
-                impl.DeleteWeight(weightLog.WeightId, weightLog);
-                
+                impl.DeleteWeight(weight_id);
+
                 return RedirectToAction("showUserWeightLog", new { user_id = Session["Id"] });
             }
             return View();
-
 
 
         }

@@ -10,12 +10,12 @@ CONSTRAINT [PK_PaymentTbl] PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[PaymentTbl] WITH CHECK ADD CONSTRAINT [FK_PaymentTbl_NutritionPlan] FOREIGN KEY([Plan_id])
+ALTER TABLE [dbo].[PaymentTbl] ADD CONSTRAINT [FK_PaymentTbl_NutritionPlan] FOREIGN KEY([Plan_id])
 REFERENCES [dbo].[NutritionPlan] ([NutriPlanId])
 GO
 ALTER TABLE [dbo].[PaymentTbl] CHECK CONSTRAINT [FK_PaymentTbl_NutritionPlan]
 GO
-ALTER TABLE [dbo].[PaymentTbl] WITH CHECK ADD CONSTRAINT [FK_PaymentTbl_UserDetails] FOREIGN KEY([User_id])
+ALTER TABLE [dbo].[PaymentTbl] ADD CONSTRAINT [FK_PaymentTbl_UserDetails] FOREIGN KEY([User_id])
 REFERENCES [dbo].[UserDetails] ([UserId])
 GO
 ALTER TABLE [dbo].[PaymentTbl] CHECK CONSTRAINT [FK_PaymentTbl_UserDetails]

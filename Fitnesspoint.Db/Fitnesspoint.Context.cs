@@ -31,5 +31,7 @@ namespace Fitnesspoint.Db
         public virtual DbSet<UserDetail> UserDetails { get; set; }
         public virtual DbSet<WeightLog> WeightLogs { get; set; }
         public virtual DbSet<PaymentTbl> PaymentTbls { get; set; }
+
+        public System.Data.Entity.DbSet<Fitnesspoint.Models.DietPlanModel> DietPlanModels { get; set; }
     }
 }

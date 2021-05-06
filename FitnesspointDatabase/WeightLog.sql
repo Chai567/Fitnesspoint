@@ -11,6 +11,6 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[WeightLog]  WITH CHECK ADD FOREIGN KEY([UserId])
+ALTER TABLE [dbo].[WeightLog] ADD FOREIGN KEY([UserId])
 REFERENCES [dbo].[UserDetails] ([UserId])
 GO

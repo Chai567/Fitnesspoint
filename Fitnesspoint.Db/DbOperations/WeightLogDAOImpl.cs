@@ -147,7 +147,7 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
         //deleteWeight() deletes the WeightLogs based on WeightId and WeightLogModel
-        public bool DeleteWeight(int weight_id, WeightLogModel weight)
+        public bool DeleteWeight(int weight_id)
         {
             //open a connection to a database FitnesspointDatabase
             using (var context = new FitnesspointDatabaseEntities())
