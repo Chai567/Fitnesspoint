@@ -29,6 +29,7 @@ namespace Fitnesspoint.Controllers
             Session["Id"] = user.UserId;
             Session["Name"] = user.Name;
             Session["Contact"] = user.Contact;
+            Session["Role"] = user.Role;
             return View(user);
         }
     }

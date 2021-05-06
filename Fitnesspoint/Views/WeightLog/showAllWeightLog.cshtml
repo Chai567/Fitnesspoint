@@ -6,48 +6,111 @@
 
 <h2 style="color:antiquewhite;text-align:center">All User Weights</h2>
 
-<hr/>
-<table class="table jumbotron" style="background-color:antiquewhite">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
+@if ((String.Compare(Session["Role"].ToString(), "User") == 0))
+{
+    <h2 style="color:antiquewhite;text-align:center">User Weights</h2>
+    <p>
+        @Html.ActionLink("Add Weight", "AddWeightLog", null, new { @class = "btn btn-primary btn-lg" })
+    </p>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Created_At)
-        </th>
+    <hr />
+    <table class="table jumbotron" style="background-color:antiquewhite">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Updated_At)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
-        </th>
-        <th></th>
-    </tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Created_At)
+            </th>
 
-    @foreach (var item in Model)
-    {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Weight)
-    </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Updated_At)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Created_At)
-    </td>
+        @foreach (var item in Model)
+        {
+            if (item.UserId == Convert.ToInt32(Session["Id"]))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Updated_At)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.UserId)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "UpdateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
-        @Html.ActionLink("Delete", "RemoveWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this weight log?');" })
-    </td>
-</tr>
-    }
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Created_At)
+                    </td>
 
-</table>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Updated_At)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "UpdateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
+                        @Html.ActionLink("Delete", "RemoveWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this weight log?');" })
+                    </td>
+                </tr>
+            }
+
+
+
+        }
+
+    </table>
+}
+else if ((String.Compare(Session["Role"].ToString(), "Admin") == 0))
+{
+    <h2 style="color:antiquewhite;text-align:center">All User Weights</h2>
+    <hr />
+    <table class="table jumbotron" style="background-color:antiquewhite">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Created_At)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Updated_At)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created_At)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updated_At)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-warning" })
+                    @Html.ActionLink("Delete", "RemoveWeightLog", new { weight_id = item.WeightId }, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this weight log?');" })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

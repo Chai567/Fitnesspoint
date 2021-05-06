@@ -51,19 +51,6 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
-        
-        
-        // GET: WeightLog/showUserWeightLog/user_id
-        public ActionResult ShowUserWeightLog(int user_id)
-        {
-            
-            //fetch data from weight log having UserId equals to user_id present in the database 
-            var weightLogs = impl.FindUserWeight(user_id);
-            //pass the fetched data to View
-            return View(weightLogs);
-
-        }
-
         // GET: WeightLog/updateWeightLog/weight_id
         public ActionResult UpdateWeightLog(int weight_id)
         {
@@ -84,7 +71,7 @@ namespace Fitnesspoint.Controllers
                 //update data in the database based on WeightId 
                 impl.UpdateWeight(weightLog.WeightId, weightLog);
                 //redirect to WeightLog/showUserWeightLog
-                return RedirectToAction("showUserWeightLog",new { user_id=Session["Id"]});
+                return RedirectToAction("ShowAllWeightLog", new { user_id=Session["Id"]});
 
             }
             return View();
@@ -101,7 +88,7 @@ namespace Fitnesspoint.Controllers
                 //delete data in the database based on WeightId 
                 impl.DeleteWeight(weight_id);
 
-                return RedirectToAction("showUserWeightLog", new { user_id = Session["Id"] });
+                return RedirectToAction("ShowAllWeightLog", new { user_id = Session["Id"] });
             }
             return View();
 

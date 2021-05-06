@@ -213,7 +213,6 @@
     <Content Include="Views\Exercise\ChooseGoal.cshtml" />
     <Content Include="Views\AddCart\AddCart.cshtml" />
     <Content Include="Views\ShowCart\Index.cshtml" />
-    <Content Include="Views\WeightLog\showUserWeightLog.cshtml" />
     <Content Include="Views\NutritionPlan\listUserAllPlans.cshtml" />
     <Content Include="Views\DietPlan\listUserDietPlan.cshtml" />
     <Content Include="Views\Checkout\Index.cshtml" />
