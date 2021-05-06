@@ -77,7 +77,8 @@ namespace Fitnesspoint.Db.DbOperations
                                                   AllergicTo = x.AllergicTo,
                                                   Goal = x.Goal,
                                                   Email = x.Email,
-                                                  Contact = (long)x.Contact
+                                                  Contact = (long)x.Contact,
+                                                  Role = x.Role
                                               }).FirstOrDefault();
 
                 return result;
