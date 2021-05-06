@@ -15,20 +15,6 @@ namespace Fitnesspoint.Controllers
     public class AccountController : Controller
     {
         
-        //Creating a reference variable of UserRepositry type.
-        
-        readonly UserRepository Repository = null;
-
-
-        //This a constructor to initialize the variables.
-
-        public AccountController()
-        {
-            Repository = new UserRepository();
-
-        }
-
-
         // Getting the view of registeration page.
         //Here two lists of strings are passed for drowpdowns.
         //In the view Gender and Goal are dropdowns.The content of these lists is rendered under gender and goal respectively. 
@@ -57,7 +43,10 @@ namespace Fitnesspoint.Controllers
         [HttpPost]
         public ActionResult Register(UserModel model)
         {
+            UserRepository Repository = new UserRepository();
+
             model.Role = "User";
+
             bool checkUsername = Repository.UsernameExits(model);
             if (ModelState.IsValid)
             {
