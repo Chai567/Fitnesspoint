@@ -27,3 +27,10 @@ textarea {
 td {
     word-break: break-all;
 }
+
+.required::after {
+    content: "*";
+    font-weight: bold;
+    font-size: x-large;
+    color: darkorange;
+}
