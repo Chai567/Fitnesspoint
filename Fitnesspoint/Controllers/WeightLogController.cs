@@ -29,6 +29,7 @@ namespace Fitnesspoint.Controllers
                 weightLog.Updated_At = DateTime.UtcNow;
                 //save data in the database 
                 db.WeightLogs.Add(weightLog);
+                db.SaveChanges();
                 //shows message to user if data is inserted
                 ViewBag.Message = "Weight Inserted successfully";
                 //deletes the data from model
