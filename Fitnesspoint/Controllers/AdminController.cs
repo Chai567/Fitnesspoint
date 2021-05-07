@@ -81,25 +81,7 @@ namespace Fitnesspoint.Controllers
         //This method is to allow Admin to delete a user.
         //The details of the selected user will be displayed.
         //A button to delete will be given.
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserDetail userDetail = db.UserDetails.Find(id);
-            if (userDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userDetail);
-        }
-
-        //This is a post method for delete.
-        //All the entries of the selected user will be deleted from the table
-        //if Admin confirms the delete process.
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
             UserDetail userDetail = db.UserDetails.Find(id);
