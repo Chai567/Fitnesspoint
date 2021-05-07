@@ -184,9 +184,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\WeightLog\AddWeightLog.cshtml" />
-    <Content Include="Views\WeightLog\ShowAllWeightLog.cshtml" />
-    <Content Include="Views\WeightLog\UpdateWeightLog.cshtml" />
     <Content Include="Views\NutritionPlan\CreateNutritionPlan.cshtml" />
     <Content Include="Views\NutritionPlan\ListAllPlans.cshtml" />
     <Content Include="Views\NutritionPlan\ChangePlan.cshtml" />
@@ -218,6 +215,9 @@
     <Content Include="Views\Checkout\ProceedToPay.cshtml" />
     <Content Include="Views\Checkout\Paid.cshtml" />
     <Content Include="Views\User\WelcomeUser.cshtml" />
+    <Content Include="Views\WeightLog\AddWeightLog.cshtml" />
+    <Content Include="Views\WeightLog\ShowAllWeightLog.cshtml" />
+    <Content Include="Views\WeightLog\UpdateWeightLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
