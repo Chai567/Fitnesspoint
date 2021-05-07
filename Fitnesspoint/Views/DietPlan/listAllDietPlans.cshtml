@@ -20,64 +20,137 @@
     }
 }
 
-<h2 style="color:antiquewhite;text-align:center">All Diet Plans</h2>
 
-<hr />
-<table class="table jumbotron" style="background-color:antiquewhite">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Slots)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FoodType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FatRatio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CarbsRatio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProteinRatio)
-        </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+@if ((String.Compare(Session["Role"].ToString(), "User") == 0))
+{
+    <h2 style="color:antiquewhite;text-align:center">User Diet Plans</h2>
+    <p>
+        @Html.ActionLink("Add Diet Plan", "CreateDietPlan", null, new { @class = "btn btn-primary btn-lg" })
+    </p>
+    <hr />
+    <table class="table jumbotron" style="background-color:antiquewhite">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Slots)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FoodType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FatRatio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CarbsRatio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProteinRatio)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Slots)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarbsRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProteinRatio)
+            </th>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "ChangeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
-                @Html.ActionLink("Calorie Details", "ShowCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
-               @Html.ActionLink("Delete", "RemoveDietPlan", new { diet_id = item.DietId}, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this diet plan?');" })
-              
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            if (item.UserId == Convert.ToInt32(Session["Id"]))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Slots)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FatRatio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CarbsRatio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProteinRatio)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "ChangeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
+                        @Html.ActionLink("Calorie Details", "ShowCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
+                        @Html.ActionLink("Delete", "RemoveDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this diet plan?');" })
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+    </table>
+}
+else if ((String.Compare(Session["Role"].ToString(), "Admin") == 0))
+{
+    <h2 style="color:antiquewhite;text-align:center">All Diet Plans</h2>
+
+    <hr />
+    <table class="table jumbotron" style="background-color:antiquewhite">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Slots)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarbsRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProteinRatio)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slots)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FoodType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatRatio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarbsRatio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProteinRatio)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "ChangeDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-warning" })
+                    @Html.ActionLink("Calorie Details", "ShowCalorieContent", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-primary" })
+                    @Html.ActionLink("Delete", "RemoveDietPlan", new { diet_id = item.DietId }, new { @class = "btn btn-primary lg btn-danger", onclick = "return confirm('Are you sure you wish to delete this diet plan?');" })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
 
 

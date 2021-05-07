@@ -85,44 +85,6 @@ namespace Fitnesspoint.Db.DbOperations
         }
 
 
-
-
-        //USER Weight Log
-        //findUserWeight() returns the list of all WeightLog based on UserId
-        public List<WeightLogModel> FindUserWeight(int user_id)
-        {
-            //open a connection to a database FitnesspointDatabase
-            using (var context = new FitnesspointDatabaseEntities())
-            {
-                //retrieving weightLog from the database WeightLog
-                //using model WeightLogModel based on UserId
-
-                var res = context.WeightLogs
-                    .Where(x => x.UserId == user_id)
-                    .Select(x => new WeightLogModel()
-                    {
-                        WeightId = x.WeightId,
-                        Weight = x.Weight,
-                        Created_At = x.Created_At,
-                        Updated_At = x.Updated_At,
-                        UserId = x.UserId
-                    }).ToList();
-
-
-                return res;
-            }
-
-
-        }
-
-
-
-
-
-
-
-
-
         //updateWeight() update the WeightLogs based on WeightId and WeightLogModel
         public bool UpdateWeight(int weight_id, WeightLogModel weight)
         {
