@@ -9,16 +9,16 @@ namespace Fitnesspoint.Models
 {
     public class ExerciseDetails
     {
-        public int exerciseid { get; set; }
-        public string exercisetype { get; set; }
-        public string exercisefor { get; set; }
-        public int totalset { get; set; }
-        public string rest { get; set; }
-        public string focus { get; set; }
-        public string equipement { get; set; }
-        public string time { get; set; }
-        public string exercisename { get; set; }
+        public int Exerciseid { get; set; }
+        public string Exercisetype { get; set; }
+        public string Exercisefor { get; set; }
+        public int Totalset { get; set; }
+        public string Rest { get; set; }
+        public string Focus { get; set; }
+        public string Equipement { get; set; }
+        public string Time { get; set; }
+        public string Exercisename { get; set; }
 
-        public List<ExerciseDetails> productlist { get; set; }
+        public List<ExerciseDetails> Productlist { get; set; }
     }
 }

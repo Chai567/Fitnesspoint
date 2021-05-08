@@ -41,11 +41,11 @@ namespace Fitnesspoint.Controllers
             string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
             String myquery = "Select * from exercisedetail";
             SqlConnection con = new SqlConnection(mycon);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = myquery;
-            cmd.Connection = con;
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
+            SqlCommand cmd = new SqlCommand(myquery,con);
+            //cmd.CommandText = myquery;
+            //cmd.Connection = con;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //da.SelectCommand = cmd;
             DataSet ds = new DataSet();
             da.Fill(ds);
             ExerciseDetails pd1 = new ExerciseDetails();
@@ -56,21 +56,22 @@ namespace Fitnesspoint.Controllers
             {
                 ExerciseDetails pd = new ExerciseDetails();
                 
-                pd.exerciseid = Convert.ToInt32(ds.Tables[0].Rows[i]["exerciseid"].ToString());
-                pd.exercisetype = ds.Tables[0].Rows[i]["exercisetype"].ToString();
-                pd.exercisefor = ds.Tables[0].Rows[i]["exercisefor"].ToString();
-                pd.totalset = Convert.ToInt32(ds.Tables[0].Rows[i]["totalset"].ToString()); ;
-                pd.rest = ds.Tables[0].Rows[i]["rest"].ToString();
-                pd.focus = ds.Tables[0].Rows[i]["focus"].ToString();
-                pd.equipement = ds.Tables[0].Rows[i]["equipement"].ToString();
-                pd.time = ds.Tables[0].Rows[i]["time"].ToString();
-                pd.exercisename = ds.Tables[0].Rows[i]["exercisename"].ToString();
+                pd.Exerciseid = Convert.ToInt32(ds.Tables[0].Rows[i]["exerciseid"].ToString());
+                pd.Exercisetype = ds.Tables[0].Rows[i]["exercisetype"].ToString();
+                pd.Exercisefor = ds.Tables[0].Rows[i]["exercisefor"].ToString();
+                pd.Totalset = Convert.ToInt32(ds.Tables[0].Rows[i]["totalset"].ToString()); ;
+                pd.Rest = ds.Tables[0].Rows[i]["rest"].ToString();
+                pd.Focus = ds.Tables[0].Rows[i]["focus"].ToString();
+                pd.Equipement = ds.Tables[0].Rows[i]["equipement"].ToString();
+                pd.Time = ds.Tables[0].Rows[i]["time"].ToString();
+                pd.Exercisename = ds.Tables[0].Rows[i]["exercisename"].ToString();
+                
                 // a list to receive the data from class object
                 productlist.Add(pd);
             }
             // stred all the data
             // closing the connection
-            pd1.productlist = productlist;
+            pd1.Productlist = productlist;
             con.Close();
             DataTable dt1 = new DataTable();
             dt1 = (DataTable)Session["buyitems"];
