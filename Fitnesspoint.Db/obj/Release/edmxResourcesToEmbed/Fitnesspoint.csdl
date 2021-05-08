@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FitnesspointDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DietPlan">
+    <Key>
+      <PropertyRef Name="DietId" />
+    </Key>
+    <Property Name="DietId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Slots" Type="Int32" Nullable="false" />
+    <Property Name="FoodType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatRatio" Type="Int32" Nullable="false" />
+    <Property Name="CarbsRatio" Type="Int32" Nullable="false" />
+    <Property Name="ProteinRatio" Type="Int32" Nullable="false" />
+    <Property Name="TotalCalorie" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserDetail" Relationship="Self.FK_DietPlan_User" FromRole="DietPlan" ToRole="UserDetails" />
+  </EntityType>
+  <EntityType Name="ExerciseDetail">
+    <Key>
+      <PropertyRef Name="ExerciseID" />
+    </Key>
+    <Property Name="ExerciseID" Type="Int32" Nullable="false" />
+    <Property Name="ExerciseType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExerciseFor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalSet" Type="Int32" Nullable="false" />
+    <Property Name="Rest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Focus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Equipement" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExerciseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="UserDetail" Relationship="Self.FK__ExerciseD__UserI__34C8D9D1" FromRole="ExerciseDetail" ToRole="UserDetails" />
+  </EntityType>
+  <EntityType Name="NutritionPlan">
+    <Key>
+      <PropertyRef Name="NutriPlanId" />
+    </Key>
+    <Property Name="NutriPlanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PlanDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Created_At" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_At" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PaymentTbls" Relationship="FitnesspointDatabaseModel.FK_PaymentTbl_NutritionPlan" FromRole="NutritionPlan" ToRole="PaymentTbl" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="MedicalCondition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AllergicTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Diet_Plan_id" Type="Int32" />
+    <NavigationProperty Name="DietPlans" Relationship="Self.FK_DietPlan_User" FromRole="UserDetails" ToRole="DietPlan" />
+    <NavigationProperty Name="ExerciseDetails" Relationship="Self.FK__ExerciseD__UserI__34C8D9D1" FromRole="UserDetails" ToRole="ExerciseDetail" />
+    <NavigationProperty Name="WeightLogs" Relationship="Self.FK__WeightLog__UserI__38996AB5" FromRole="UserDetails" ToRole="WeightLog" />
+    <NavigationProperty Name="PaymentTbls" Relationship="FitnesspointDatabaseModel.FK_PaymentTbl_UserDetails" FromRole="UserDetail" ToRole="PaymentTbl" />
+  </EntityType>
+  <EntityType Name="WeightLog">
+    <Key>
+      <PropertyRef Name="WeightId" />
+    </Key>
+    <Property Name="WeightId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <Property Name="Created_At" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_At" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="UserDetail" Relationship="Self.FK__WeightLog__UserI__38996AB5" FromRole="WeightLog" ToRole="UserDetails" />
+  </EntityType>
+  <Association Name="FK_DietPlan_User">
+    <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="1" />
+    <End Role="DietPlan" Type="Self.DietPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="DietPlan">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ExerciseD__UserI__34C8D9D1">
+    <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="0..1" />
+    <End Role="ExerciseDetail" Type="Self.ExerciseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ExerciseDetail">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeightLog__UserI__38996AB5">
+    <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="0..1" />
+    <End Role="WeightLog" Type="Self.WeightLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetails">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="WeightLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FitnesspointDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DietPlans" EntityType="Self.DietPlan" />
+    <EntitySet Name="ExerciseDetails" EntityType="Self.ExerciseDetail" />
+    <EntitySet Name="NutritionPlans" EntityType="Self.NutritionPlan" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+    <EntitySet Name="WeightLogs" EntityType="Self.WeightLog" />
+    <AssociationSet Name="FK_DietPlan_User" Association="Self.FK_DietPlan_User">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="DietPlan" EntitySet="DietPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ExerciseD__UserI__34C8D9D1" Association="Self.FK__ExerciseD__UserI__34C8D9D1">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="ExerciseDetail" EntitySet="ExerciseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeightLog__UserI__38996AB5" Association="Self.FK__WeightLog__UserI__38996AB5">
+      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="WeightLog" EntitySet="WeightLogs" />
+    </AssociationSet>
+    <EntitySet Name="PaymentTbls" EntityType="FitnesspointDatabaseModel.PaymentTbl" />
+    <AssociationSet Name="FK_PaymentTbl_NutritionPlan" Association="FitnesspointDatabaseModel.FK_PaymentTbl_NutritionPlan">
+      <End Role="NutritionPlan" EntitySet="NutritionPlans" />
+      <End Role="PaymentTbl" EntitySet="PaymentTbls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTbl_UserDetails" Association="FitnesspointDatabaseModel.FK_PaymentTbl_UserDetails">
+      <End Role="UserDetail" EntitySet="UserDetails" />
+      <End Role="PaymentTbl" EntitySet="PaymentTbls" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PaymentTbl">
+    <Key>
+      <PropertyRef Name="Order_id" />
+    </Key>
+    <Property Name="Order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_id" Type="Int32" />
+    <Property Name="Plan_id" Type="Int32" />
+    <Property Name="Plan_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NutritionPlan" Relationship="FitnesspointDatabaseModel.FK_PaymentTbl_NutritionPlan" FromRole="PaymentTbl" ToRole="NutritionPlan" />
+    <NavigationProperty Name="UserDetail" Relationship="FitnesspointDatabaseModel.FK_PaymentTbl_UserDetails" FromRole="PaymentTbl" ToRole="UserDetail" />
+  </EntityType>
+  <Association Name="FK_PaymentTbl_NutritionPlan">
+    <End Type="FitnesspointDatabaseModel.NutritionPlan" Role="NutritionPlan" Multiplicity="0..1" />
+    <End Type="FitnesspointDatabaseModel.PaymentTbl" Role="PaymentTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NutritionPlan">
+        <PropertyRef Name="NutriPlanId" />
+      </Principal>
+      <Dependent Role="PaymentTbl">
+        <PropertyRef Name="Plan_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTbl_UserDetails">
+    <End Type="FitnesspointDatabaseModel.UserDetail" Role="UserDetail" Multiplicity="0..1" />
+    <End Type="FitnesspointDatabaseModel.PaymentTbl" Role="PaymentTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetail">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="PaymentTbl">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

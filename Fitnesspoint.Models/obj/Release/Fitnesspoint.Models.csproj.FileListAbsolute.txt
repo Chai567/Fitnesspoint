@@ -1,0 +1,6 @@
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\bin\Release\Fitnesspoint.Models.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\bin\Release\Fitnesspoint.Models.pdb
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Release\Fitnesspoint.Models.csprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Release\Fitnesspoint.Models.csproj.CoreCompileInputs.cache
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Release\Fitnesspoint.Models.dll
+C:\Users\rohit.patidar\source\Fitnesspoint.Final\Fitnesspoint.Models\obj\Release\Fitnesspoint.Models.pdb

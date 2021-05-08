@@ -45,11 +45,10 @@ namespace Fitnesspoint.Controllers
                         string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
                         SqlConnection scon = new SqlConnection(mycon);
                         String myquery = "select * from exercisedetail where exerciseid=" + Request.QueryString["exerciseid"];
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = myquery;
-                        cmd.Connection = scon;
-                        SqlDataAdapter da = new SqlDataAdapter();
-                        da.SelectCommand = cmd;
+                        SqlCommand cmd = new SqlCommand(myquery,scon);
+                        
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        
                         DataSet ds = new DataSet();
                         da.Fill(ds);
                         // using datarow object records added
@@ -85,11 +84,10 @@ namespace Fitnesspoint.Controllers
                         string mycon = ConfigurationManager.ConnectionStrings["FitnesspointDatabase"].ConnectionString;
                         SqlConnection scon = new SqlConnection(mycon);
                         String myquery = "select * from exercisedetail where exerciseid=" + Request.QueryString["exerciseid"];
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = myquery;
-                        cmd.Connection = scon;
-                        SqlDataAdapter da = new SqlDataAdapter();
-                        da.SelectCommand = cmd;
+                        SqlCommand cmd = new SqlCommand(myquery,scon);
+                        
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        
                         DataSet ds = new DataSet();
                         da.Fill(ds);
 
