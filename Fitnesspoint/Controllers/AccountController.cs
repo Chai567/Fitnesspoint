@@ -55,11 +55,8 @@ namespace Fitnesspoint.Controllers
                 {
                     int id = Repository.AddUser(model);
                     ViewBag.Message = "You are registered";
-                    if (id > 0)
-                    {
-                        ModelState.Clear();
+                    ModelState.Clear();
 
-                    }
                     return RedirectToAction("Login", "Account");
                 }
                 else
@@ -93,7 +90,7 @@ namespace Fitnesspoint.Controllers
         }
 
         //This is the post method of login.User enters the username and password.
-        //Then these credentials are then matched against entries in Userdetails table.
+        //Then these credentials are matched against entries in Userdetails table.
         //If matched User is redirected to the desired page.
         [HttpPost]
         public ActionResult Login(UserModel model)

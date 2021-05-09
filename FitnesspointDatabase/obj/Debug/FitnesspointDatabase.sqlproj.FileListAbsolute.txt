@@ -79,3 +79,13 @@ C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
 C:\Users\rohit.patidar\source\Fitnesspoint.Final\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dacpac
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\bin\Debug\FitnesspointDatabase.pdb
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\Model.xml
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\refactor.xml
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\postdeploy.sql
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\predeploy.sql
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
+C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
