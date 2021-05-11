@@ -1,4 +1,4 @@
-﻿@model Fitnesspoint.Db.WeightLog
+﻿@model Fitnesspoint.Models.WeightLogModel
 
 @{
     ViewBag.Title = "addWeightLog";
@@ -20,7 +20,7 @@
     }
 }
 
-<h2 style="color:antiquewhite;text-align:center">Add Weight</h2>
+<h2 style="color:antiquewhite;text-align:center">Add Weight</h2>&nbsp;&nbsp;<p style="color:antiquewhite">Fields with <i style="color:darkorange;font-size:large">*</i> are mandatory.</p>
 
 @using (Html.BeginForm())
 {
@@ -31,7 +31,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @style = "color:antiquewhite" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Weight, "", new { @style = "color:antiquewhite" })

@@ -12,14 +12,14 @@ namespace Fitnesspoint.Controllers
     {
         readonly NutritionPlanDAOImpl impl = new NutritionPlanDAOImpl();
         
-        // GET: NutritionPlan/createNutritionPlan
+        // GET: NutritionPlan/CreateNutritionPlan
         public ActionResult CreateNutritionPlan()
         {
             return View();
         }
 
 
-        // POST: NutritionPlan/createNutritionPlan
+        // POST: NutritionPlan/CreateNutritionPlan
         [HttpPost]
         public ActionResult CreateNutritionPlan(NutritionPlanModel nutritionPlan)
         {
@@ -41,7 +41,7 @@ namespace Fitnesspoint.Controllers
 
        
         
-        // GET: NutritionPlan/listAllPlans
+        // GET: NutritionPlan/ListAllPlans
         [HttpGet]
         public ActionResult ListAllPlans()
         {
@@ -53,7 +53,7 @@ namespace Fitnesspoint.Controllers
 
        
         
-        // GET: NutritionPlan/listUserAllPlans
+        // GET: NutritionPlan/ListUserAllPlans
         [HttpGet]
         public ActionResult ListUserAllPlans(int User_id, long Contact, string Name)
         {
@@ -66,17 +66,17 @@ namespace Fitnesspoint.Controllers
             return View(result);
         }
 
-        // GET: NutritionPlan/changePlan/plan_id
+        // GET: NutritionPlan/ChangePlan/plan_id
         public ActionResult ChangePlan(int plan_id)
         {
-            //fetch data from nutrition plan having NutriPlanId equals to plan_id present in the database 
+            //fetch data from nutrition plan having plan_id equals to NutriPlanId present in the database 
             var nutritionplan = impl.FindNutritionPlan(plan_id);
             //pass the fetched data to View
             return View(nutritionplan);
 
         }
 
-        // POST: NutritionPlan/changePlan/plan_id
+        // POST: NutritionPlan/ChangePlan/plan_id
         [HttpPost]
         public ActionResult ChangePlan(NutritionPlanModel nutritionPlan)
         {
@@ -93,7 +93,7 @@ namespace Fitnesspoint.Controllers
 
         }
 
-        // GET: NutritionPlan/removePlan/plan_id
+        // GET: NutritionPlan/RemovePlan/plan_id
         public ActionResult RemovePlan(int plan_id)
         {
             //check if the model state is valid or not

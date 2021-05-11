@@ -3,33 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Fitnesspoint.Db;
+using Fitnesspoint.Models;
+using Fitnesspoint.Db.DbOperations;
 
 namespace Fitnesspoint.Controllers
 {
     public class WeightLogController : Controller
     {
-        private readonly FitnesspointDatabaseEntities db = new FitnesspointDatabaseEntities();
-
-        // GET: WeightLog/addWeightLog
+        readonly WeightLogDAOImpl impl = new WeightLogDAOImpl();
+        
+        // GET: WeightLog/AddWeightLog
         public ActionResult AddWeightLog()
         {
            
             return View();
         }
 
-        // POST: WeightLog/addWeightLog
+        // POST: WeightLog/AddWeightLog
         [HttpPost]
-        public ActionResult AddWeightLog(WeightLog weightLog)
+        public ActionResult AddWeightLog(WeightLogModel weightLog)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
-                weightLog.Created_At = DateTime.UtcNow;
-                weightLog.Updated_At = DateTime.UtcNow;
                 //save data in the database 
-                db.WeightLogs.Add(weightLog);
-                db.SaveChanges();
+                impl.SaveWeight(weightLog);
                 //shows message to user if data is inserted
                 ViewBag.Message = "Weight Inserted successfully";
                 //deletes the data from model
@@ -43,43 +41,36 @@ namespace Fitnesspoint.Controllers
 
         
         
-        // GET: WeightLog/showAllWeightLog
+        // GET: WeightLog/ShowAllWeightLog
         [HttpGet]
         public ActionResult ShowAllWeightLog()
         {
             //fetch data from all weightlogs present in the database 
-            var result = db.WeightLogs.ToList();
+            var result = impl.FindAllWeight();
             //pass the fetched data to View
             return View(result);
         }
 
-        // GET: WeightLog/updateWeightLog/weight_id
+        // GET: WeightLog/UpdateWeightLog/weight_id
         public ActionResult UpdateWeightLog(int weight_id)
         {
-            //fetch data from weight log having WeightId equals to weight_id present in the database 
-            var weightLog = db.WeightLogs.Where(x => x.WeightId == weight_id).SingleOrDefault();
+            //fetch data from weight log having weight_id equals to WeightId present in the database 
+            var weightLog = impl.FindWeight(weight_id);
             //pass the fetched data to View
             return View(weightLog);
 
         }
 
-        // POST: WeightLog/updateWeightLog/weight_id
+        // POST: WeightLog/UpdateWeightLog/weight_id
         [HttpPost]
-        public ActionResult UpdateWeightLog(WeightLog weightLog)
+        public ActionResult UpdateWeightLog(WeightLogModel weightLog)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
-                var weightLog1 = db.WeightLogs.Where(x => x.WeightId == weightLog.WeightId).SingleOrDefault();
-
-                if (weightLog1 != null)
-                {
-                    weightLog1.Weight = weightLog.Weight;
-                    weightLog1.Updated_At = DateTime.UtcNow;
-                    weightLog1.UserId = weightLog.UserId;
-                    db.SaveChanges();
-                }
-                //redirect to WeightLog/showUserWeightLog
+                //update data in the database based on WeightId 
+                impl.UpdateWeight(weightLog.WeightId, weightLog);
+                //redirect to WeightLog/ShowAllWeightLog
                 return RedirectToAction("ShowAllWeightLog", new { user_id=Session["Id"]});
 
             }
@@ -88,15 +79,15 @@ namespace Fitnesspoint.Controllers
         }
 
 
-        // GET: WeightLog/removeWeightLog/weight_id
+        // GET: WeightLog/RemoveWeightLog/weight_id
         public ActionResult RemoveWeightLog(int weight_id)
         {
             //check if the model state is valid or not
             if (ModelState.IsValid)
             {
-                WeightLog weightLog = db.WeightLogs.Find(weight_id);
-                db.WeightLogs.Remove(weightLog);
-                db.SaveChanges();
+                //delete data in the database based on WeightId 
+                impl.DeleteWeight(weight_id);
+                //redirect to WeightLog/ShowAllWeightLog
                 return RedirectToAction("ShowAllWeightLog", new { user_id = Session["Id"] });
             }
             return View();

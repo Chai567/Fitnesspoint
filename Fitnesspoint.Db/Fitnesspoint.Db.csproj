@@ -56,6 +56,7 @@
     <Compile Include="DbOperations\DietPlanDAOImpl.cs" />
     <Compile Include="DbOperations\NutritionPlanDAOImpl.cs" />
     <Compile Include="DbOperations\UserRepository.cs" />
+    <Compile Include="DbOperations\WeightLogDAOImpl.cs" />
     <Compile Include="DietPlan.cs">
       <DependentUpon>Fitnesspoint.tt</DependentUpon>
     </Compile>

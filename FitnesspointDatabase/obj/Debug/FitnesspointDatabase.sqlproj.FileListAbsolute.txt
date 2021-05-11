@@ -89,3 +89,4 @@ C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\postdeploy.sql
 C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\predeploy.sql
 C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.dll
 C:\Users\rohit.patidar\source\Yash\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.pdb
+C:\Users\Chaitanya.shah\Desktop\FitnesspointDatabase\obj\Debug\FitnesspointDatabase.sqlprojAssemblyReference.cache

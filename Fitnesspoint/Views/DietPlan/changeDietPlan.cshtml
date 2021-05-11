@@ -20,7 +20,7 @@
     }
 }
 
-<h2 style="color:antiquewhite;text-align:center">Edit Diet Plan</h2>
+<h2 style="color:antiquewhite;text-align:center">Edit Diet Plan</h2>&nbsp;&nbsp;<p style="color:antiquewhite">Fields with <i style="color:darkorange;font-size:large">*</i> are mandatory.</p>
 
 @using (Html.BeginForm())
 {
@@ -33,7 +33,7 @@
         @Html.HiddenFor(model => model.DietId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Slots, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.Slots, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Slots, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Slots, "", new { @style = "color:antiquewhite" })
@@ -41,15 +41,15 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FoodType, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.FoodType, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FoodType, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FoodType, ""  ,new { @style = "color:antiquewhite" })
+                @Html.ValidationMessageFor(model => model.FoodType, "", new { @style = "color:antiquewhite" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FatRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.FatRatio, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FatRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FatRatio, "", new { @style = "color:antiquewhite" })
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CarbsRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.CarbsRatio, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CarbsRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CarbsRatio, "", new { @style = "color:antiquewhite" })
@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProteinRatio, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.ProteinRatio, htmlAttributes: new { @class = "control-label col-md-2 required", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProteinRatio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProteinRatio, "", new { @style = "color:antiquewhite" })
@@ -75,7 +75,7 @@
 
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
+            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2 ", @style = "color:antiquewhite;font-weight:900;font-size:larger" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.UserId, "", new { @style = "color:antiquewhite" })
@@ -94,4 +94,4 @@
     <p style="font-weight:900;font-size:large;text-align:right">@Html.ActionLink("List All Diet Plans", "ListAllDietPlans", new { user_id = Session["Id"] })</p>
 </div>
 
- 
+

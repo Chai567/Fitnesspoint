@@ -8,7 +8,7 @@ namespace Fitnesspoint.Db.DbOperations
 {
     public class NutritionPlanDAOImpl
     {
-        //savePlan() saves NutritionPlan in the database
+        //SavePlan() saves NutritionPlan in the database
         public NutritionPlan SavePlan(NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
@@ -36,7 +36,7 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
-        //findAllNutritionPlan() returns the list of NutritionPlanModel Objects
+        //FindAllNutritionPlan() returns the list of NutritionPlanModel Objects
         public List<NutritionPlanModel> FindAllNutritionPlan()
         {
             //open a connection to a database FitnesspointDatabase
@@ -62,7 +62,7 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
-        //findNutritionPlan() returns the NutritionPlans based on NutriPlanId
+        //FindNutritionPlan() returns the NutritionPlans based on NutriPlanId
         public NutritionPlanModel FindNutritionPlan(int plan_id)
         {
             //open a connection to a database FitnesspointDatabase
@@ -91,7 +91,7 @@ namespace Fitnesspoint.Db.DbOperations
 
         }
 
-        //updateNutritionPlan() update the NutritionPlans based on NutriPlanId and NutritionPlanModel
+        //UpdateNutritionPlan() update the NutritionPlans based on NutriPlanId and NutritionPlanModel
         public bool UpdateNutritionPlan(int plan_id, NutritionPlanModel nutritionPlan)
         {
             //open a connection to a database FitnesspointDatabase
@@ -115,7 +115,7 @@ namespace Fitnesspoint.Db.DbOperations
             }
         }
 
-        //deleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
+        //DeleteNutritionPlan() deletes the NutritionPlans based on NutriPlanId and NutritionPlanModel
         public bool DeleteNutritionPlan(int plan_id)
         {
             //open a connection to a database FitnesspointDatabase
